@@ -9,14 +9,13 @@ set(TARGET_PLATFORM_FILTER "host/.*")
 
 if (BUILD_HOST_TESTS)
 project(tfmcu-test)
-set(proj_src_dir "${CMAKE_SOURCE_DIR}/../..")
+set(proj_src_dir "${CMAKE_SOURCE_DIR}/../../components")
 
 message("proj_src_dir: ${proj_src_dir}")
 
 add_compile_definitions(USE_JSON)
 
-set(COMPONENT_DIRECTORIES . _test_/components)
-list(TRANSFORM COMPONENT_DIRECTORIES PREPEND   "${proj_src_dir}/")
+set(COMPONENT_DIRECTORIES ${proj_src_dir} ${CMAKE_SOURCE_DIR}/../components)
 
 set(comp_compile_feats cxx_std_20)
 set(comp_compile_opts -O0 -ggdb  # -fanalyzer
@@ -34,7 +33,7 @@ endif()
 
 include(${proj_src_dir}/test_host/host_test.cmake)
 
-add_subdirectory(${proj_src_dir}/_test_/components/main ${CMAKE_BINARY_DIR}/${BIN_COMP_ROOT}/main)
+add_subdirectory(${CMAKE_SOURCE_DIR}/../components/main ${CMAKE_BINARY_DIR}/${BIN_COMP_ROOT}/main)
 
 message("all_inc_dirs: ${COMPONENT_LIBS_INC_DIRS}")
 message("all_libs: ${COMPONENT_LIBS}")
