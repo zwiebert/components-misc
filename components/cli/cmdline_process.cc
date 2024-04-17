@@ -12,7 +12,6 @@
 #include "uout/uo_types.h"
 #include "uout/uo_callbacks.h"
 #include "cli/cli_out.hh"
-#include "txtio/inout.h"
 #include "cli/mutex.h"
 #include "uout/uout_builder_json.hh"
 #include "debug/log.h"

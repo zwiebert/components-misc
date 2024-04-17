@@ -5,19 +5,20 @@
  *  Author: bertw
  */
 
+#include "cli_private.h"
 #include <cli/cli.h>
 #include <cli/cli_types.h>
-#include "cli_private.h"
-#include "utils_misc/bcd.h"
-#include "uout/uo_types.h"
-#include "txtio/inout.h"
-#include "cli/mutex.hh"
-#include "uout/uout_builder_json.hh"
-#include "cli/cli_out.hh"
-#include "debug/dbg.h"
-#include "utils_misc/int_types.h"
-#include <string.h>
+#include <cli/mutex.hh>
+#include <cli/cli_out.hh>
+#include <uout/uo_types.h>
+#include <uout/uout_builder_json.hh>
+#include <txtio/inout.h>
+#include <utils_misc/bcd.h>
+#include <utils_misc/int_types.h>
+#include <debug/dbg.h>
 #include <debug/log.h>
+#include <string.h>
+
 #ifdef CONFIG_CLI_DEBUG
 #define DEBUG
 #define D(x) x
