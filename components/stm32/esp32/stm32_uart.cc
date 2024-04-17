@@ -8,7 +8,7 @@
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "debug/dbg.h"
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include <stdio.h>
 #include <stdint.h>
 

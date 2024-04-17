@@ -1,6 +1,7 @@
 #pragma once
 #include "inout.h"
 #include "uout/uo_callbacks.h"
+#include <utils_misc/int_types.h>
 
 struct cfg_txtio {
   uo_flagsT flags; ///< additional flags for callback

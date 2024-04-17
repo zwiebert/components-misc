@@ -4,7 +4,7 @@
 #include "uout/uout_builder_plaintext.hh"
 #include "uout/uout_builder_json.hh"
 #include "debug/dbg.h"
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include <string.h>
 #include <utils_misc/cstring_utils.hh>
 #include <stdio.h>

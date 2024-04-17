@@ -9,7 +9,7 @@
 
 
 
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include "utils_misc/cstring_utils.h"
 #include "kvs/kvs_wrapper.h"
 

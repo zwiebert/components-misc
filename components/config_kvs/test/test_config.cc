@@ -15,7 +15,7 @@
 #include <config_kvs/comp_settings.hh>
 #include "kvs/kvs_wrapper.h"
 
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include "utils_misc/itoa.h"
 #include <stdlib.h>
 #include <stdio.h>

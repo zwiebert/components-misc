@@ -14,7 +14,7 @@
 #include <uout/uout_builder_json.hh>
 #include <txtio/inout.h>
 #include <utils_misc/bcd.h>
-#include <utils_misc/int_types.h>
+#include <stdint.h>
 #include <debug/dbg.h>
 #include <debug/log.h>
 #include <string.h>

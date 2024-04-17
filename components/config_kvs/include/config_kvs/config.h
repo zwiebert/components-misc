@@ -4,7 +4,7 @@
 #pragma once
 
 
-#include <utils_misc/int_types.h>
+#include <stdint.h>
 #include "stdbool.h"
 
 bool config_save_item_s(const char *key, const char *val);

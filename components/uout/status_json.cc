@@ -16,7 +16,7 @@
 #include <utils_misc/cstring_utils.hh>
 #include <stdlib.h>
 #include "userio_app_cfg.h"
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include "utils_misc/ftoa.h"
 #include "utils_misc/itoa.h"
 

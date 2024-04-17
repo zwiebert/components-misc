@@ -4,8 +4,8 @@
 #pragma once
 
 #include "stdbool.h"
-#include "stdint.h"
 #include <utils_misc/int_types.h>
+#include <stdint.h>
 
 extern enum verbosity txtio_verbose;
 #define TXTIO_IS_VERBOSE(lvl) (txtio_verbose >= (lvl))

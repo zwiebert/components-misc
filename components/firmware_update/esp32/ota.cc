@@ -13,7 +13,7 @@
 #include "esp_crt_bundle.h"
 #endif
 #include <txtio/inout.h>
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include "utils_misc/cstring_utils.hh"
 
 static const char *TAG = "esp32_ota";
