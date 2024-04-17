@@ -13,7 +13,7 @@
 #include "txtio/inout.h"
 #include "cli/mutex.hh"
 #include "uout/uout_builder_json.hh"
-#include "uout/cli_out.h"
+#include "cli/cli_out.hh"
 #include "debug/dbg.h"
 #include "utils_misc/int_types.h"
 #include <string.h>
@@ -28,7 +28,6 @@
 #endif
 #define logtag "cli"
 
-uint16_t cli_msgid;
 const struct parm_handlers *cli_parm_handlers;
 const parm_handler* (*cli_parmHandler_find_cb)(const char *key);
 
@@ -91,3 +90,10 @@ void cli_loop(void) {
 #endif
 
 int ENR; // error number
+
+void  print_enr(class UoutWriter &td) {
+  char buf[64];
+  if (int n = snprintf(buf, sizeof buf, "enr: %d\n", ENR); n > 0 && n < sizeof buf) {
+    td.write(buf, n);
+  }
+}

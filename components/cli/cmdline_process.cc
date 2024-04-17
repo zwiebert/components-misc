@@ -11,7 +11,7 @@
 #include "cli_private.h"
 #include "uout/uo_types.h"
 #include "uout/uo_callbacks.h"
-#include "uout/cli_out.h"
+#include "cli/cli_out.hh"
 #include "txtio/inout.h"
 #include "cli/mutex.h"
 #include "uout/uout_builder_json.hh"

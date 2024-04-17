@@ -5,7 +5,7 @@ idf_component_register(SRCS ${srcs}
     INCLUDE_DIRS "./include" 
     PRIV_INCLUDE_DIRS "./include/uout" 
     REQUIRES  utils_debug
-    PRIV_REQUIRES  utils_misc cli
+    PRIV_REQUIRES  utils_misc
 )
 component_compile_options(${comp_compile_opts})
 component_compile_features(${comp_compile_feats})

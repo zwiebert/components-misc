@@ -35,7 +35,6 @@ cli_parseCommandline(char *cl, struct cli_parm *clp) {
 #undef MAX_PAR
 #define MAX_PAR (clp->size)
   unsigned p;
-  cli_msgid = 0;
 
   for (p = 0; p < MAX_PAR; ++p) {
     bool isValQuoted = false;
@@ -101,10 +100,9 @@ cli_parseCommandline(char *cl, struct cli_parm *clp) {
         *cl++ = '\0';
       }
 
-      // found global option
+      // found obsolete global option
       // process it here and remove the key/val
       if (strcmp(cli_par[p].key, "mid") == 0) {
-        cli_msgid = atoi(cli_par[p].val);
         --p;
       }
 

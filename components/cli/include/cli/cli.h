@@ -59,12 +59,6 @@ extern bool (*cli_hook_process_json)(char *json);
 extern bool (*cli_hook_process_json_obj)(class UoutWriter &td, Jsmn_String::Iterator &it);
 
 /**
- * \brief the parser stores the mid option in this global variable (FIXME)
- */
-extern uint16_t cli_msgid;
-
-
-/**
  * \brief            Gets a command line from a console. Allows quoting strings and backspace to edit typos.
  * \param buf        provides the destination buffer
  * \param getc_fun   provides a pointer to a function to read the characters from

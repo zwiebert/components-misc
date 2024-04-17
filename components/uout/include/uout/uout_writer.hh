@@ -4,9 +4,9 @@
  */
 #pragma once
 #include "so_out.h"
-#include "cli_out.h"
 #include "so_target_bits.h"
 #include "uout_builder_json.hh"
+#include "uout_builder_plaintext.hh"
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
