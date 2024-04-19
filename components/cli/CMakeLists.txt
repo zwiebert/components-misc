@@ -25,7 +25,7 @@ if(COMMAND idf_component_register)
 idf_component_register(SRCS ${srcs} 
     INCLUDE_DIRS "./include"  
     REQUIRES uout jsmn 
-    PRIV_REQUIRES   utils_debug utils_misc txtio 
+    PRIV_REQUIRES utils_debug utils_misc  
                   esp_event  #PRIV_ESP_IDF
 )
 
@@ -35,6 +35,6 @@ component_compile_features(${comp_compile_feats})
 else()
 add_library(cli STATIC ${srcs})
 target_include_directories(cli PUBLIC ./include)
-target_link_libraries(cli PUBLIC uout jsmn PRIVATE utils_debug utils_misc txtio)
+target_link_libraries(cli PUBLIC uout jsmn PRIVATE utils_debug utils_misc)
 
 endif()

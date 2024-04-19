@@ -9,7 +9,6 @@
 
 #include "storage/storage.h"
 #include "debug/dbg.h"
-#include "txtio/inout.h"
 
 #ifdef TEST_HOST
 #define DB(x)
@@ -23,7 +22,7 @@
 
 
 void spiffs_print_errno() {
-  io_printf("errno: IMPLEMENT_ME");
+  fprintf(stderr, "%s: IMPLEMENT_ME", __func__);
 }
 ///////////// implement read/ write from storage.h ////////////////////////
 

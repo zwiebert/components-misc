@@ -1,5 +1,4 @@
 #include "cli_private.h"
-#include "txtio/inout.h"
 #include "cli/cli.h"
 #include <debug/log.h>
 #ifdef CONFIG_CLI_DEBUG

@@ -12,7 +12,6 @@
 #ifdef CONFIG_APP_OTA_USE_CERT_BUNDLE
 #include "esp_crt_bundle.h"
 #endif
-#include <txtio/inout.h>
 #include "stdint.h"
 #include "utils_misc/cstring_utils.hh"
 
@@ -87,8 +86,6 @@ static void simple_ota_example_task(void *pvParameter) {
 
 
 static bool our_ota_doUpdate(const char *firmware_url, const char *cert) {
-  io_printf_v(vrb3, "OTA: url=<%s>\n", firmware_url);
-
   auto parm = new task_parm;
   parm->url = firmware_url;
   parm->cert = cert;

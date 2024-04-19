@@ -12,7 +12,6 @@
 #include <cli/cli_out.hh>
 #include <uout/uo_types.h>
 #include <uout/uout_builder_json.hh>
-#include <txtio/inout.h>
 #include <utils_misc/bcd.h>
 #include <stdint.h>
 #include <debug/dbg.h>
@@ -61,7 +60,6 @@ void cli_loop(void) {
         cli_process_json(cmdline, td);
       } else {
          UoutWriterConsole td { (SO_TGT_CLI | SO_TGT_FLAG_TXT) };
-        io_putlf();
         cli_process_cmdline(cmdline, td);
         cli_msg_ready(td);
       }

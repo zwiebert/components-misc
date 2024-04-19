@@ -7,7 +7,6 @@
 
 #include "cli/cli.h"
 #include "cli_private.h"
-#include "txtio/inout.h"
 #include <string.h>
 #include <stdlib.h>
 
@@ -30,7 +29,7 @@ char* get_commandline() {
     if (!cliBuf_enlarge(&buf))
       return 0;
   for (;;) {
-    switch (cli_get_commandline(&buf, io_getc_fun)) {
+    switch (cli_get_commandline(&buf, getchar)) {
 
     case CMDL_DONE:
       if (buf.buf[0] == '\0' || buf.buf[0] == '\r' || buf.buf[0] == '\n')

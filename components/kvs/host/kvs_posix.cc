@@ -26,7 +26,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <assert.h>
-#define io_printf printf
 #endif
 
 
@@ -412,7 +411,7 @@ static unsigned kvs_write_str_or_blob(kvshT h, const char *key, const void *src,
 
 bool kvs_write_str(kvshT h, const char *key, const char *src_or_dst) {
   unsigned length = strlen(src_or_dst);
-  D(io_printf("key=<%s> val=<%s> len=<%d>\n", key, (char*)src_or_dst, length));
+  D(fprintf(stderr, "key=<%s> val=<%s> len=<%d>\n", key, (char*)src_or_dst, length));
 
   unsigned res = kvs_write_str_or_blob(h, key, src_or_dst, length, KVS_TYPE_STR);
   return res == length;
