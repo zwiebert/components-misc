@@ -55,8 +55,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classWeather.html#a0bcc86d1770aeee8c1136bcf95215c2f",
-"so__target__bits_8h.html#a7bf3ea3ae842b22cc3f075dcaa3c962c",
-"uo__callbacks_8h.html#a7b5b6e1a2201ea3c9a194f783236dd33"
+"so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba16a23f03ad10bde8c0c469432b8116b3",
+"txtio_2include_2txtio_2comp__glue_8hh.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="map URI to web content">
 <polygon fill="#bfbfbf" stroke="black" points="94.5,-0.5 94.5,-68.5 153.5,-68.5 153.5,-0.5 94.5,-0.5"/>
 <text text-anchor="middle" x="124" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">file_map</text>
 <polyline fill="none" stroke="black" points="94.5,-49.5 153.5,-49.5 "/>
@@ -25,7 +25,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classContentReader.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classContentReader.html" target="_top" xlink:title="base class for serving file like things">
 <polygon fill="none" stroke="black" points="0,-116.5 0,-206.5 116,-206.5 116,-116.5 0,-116.5"/>
 <text text-anchor="middle" x="58" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">ContentReader</text>
 <polyline fill="none" stroke="black" points="0,-187.5 116,-187.5 "/>
@@ -48,7 +48,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="structweb__content.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="structweb__content.html" target="_top" xlink:title="describe web content">
 <polygon fill="none" stroke="black" points="134,-122 134,-201 248,-201 248,-122 134,-122"/>
 <text text-anchor="middle" x="191" y="-189" font-family="Helvetica,sans-Serif" font-size="10.00">web_content</text>
 <polyline fill="none" stroke="black" points="134,-182 248,-182 "/>
