@@ -45,7 +45,8 @@ static bool parse_and_process_jsmn(Jsmn_String::Iterator &it, class UoutWriter &
       cli_hook_process_json_obj(td, ++it_copy);
     }
     // skip the json object
-    Jsmn_String::skip_key_and_value(it);
+
+    it.skip_key_and_value();
     return true;
   }
 
@@ -75,7 +76,7 @@ static bool parse_and_process_jsmn(Jsmn_String::Iterator &it, class UoutWriter &
   }
 
   // eat up any non object tokens (e.g. from":"wapp")
-  Jsmn_String::skip_key_and_value(it);
+  it.skip_key_and_value();
   return true;
 }
 

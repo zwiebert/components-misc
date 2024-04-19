@@ -20,7 +20,7 @@ static const tok_processObj_funT tok_processRootChilds_funs[] = { //
         for (it += 2; count > 0 && it; --count) {
           assert(it->type == JSMN_STRING);
           if (!(it.takeValue(weather.main.humidity, "humidity") || it.takeValue(weather.main.temp, "temp") || it.takeValue(weather.main.pressure, "pressure"))) {
-jp::skip_key_and_value(it);
+it.skip_key_and_value();
 }
 }
         return true;
@@ -35,7 +35,7 @@ jp::skip_key_and_value(it);
           assert(it->type == JSMN_STRING);
 
           if (!(it.takeValue(weather.wind.speed, "speed") || it.takeValue(weather.wind.deg, "deg"))) {
-            jp::skip_key_and_value(it);
+            it.skip_key_and_value();
           }
         }
         return true;
@@ -51,7 +51,7 @@ jp::skip_key_and_value(it);
           assert(it->type == JSMN_STRING);
 
           if (!(it.takeValue(weather.clouds.all, "all"))) {
-            jp::skip_key_and_value(it);
+            it.skip_key_and_value();
           }
         }
         return true;
@@ -60,7 +60,7 @@ jp::skip_key_and_value(it);
     },
 
     [](weather_data &weather, jpit &it) -> bool { // Throw away unwanted objects
-      return jp::skip_key_and_value(it);
+      return it.skip_key_and_value();
     }};
 
 bool weather_process_json(const char *json, weather_data &weather) {
