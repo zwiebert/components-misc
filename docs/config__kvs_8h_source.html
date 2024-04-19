@@ -86,51 +86,48 @@ $(document).ready(function(){initNavTree('config__kvs_8h_source.html',''); initR
 <div class="title">config_kvs.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * config_kvs.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: 21.04.2020</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: bertw</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<a href="config__kvs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \file    config_kvs/config_kvs.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief   read settings from kvs storage by \ref cb_type</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;config_kvs/config.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">kvs</span><span class="preprocessor">/</span><span class="preprocessor">kvs_wrapper</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">config_kvs</span><span class="preprocessor">/</span><span class="preprocessor">comp_settings</span><span class="preprocessor">.</span><span class="preprocessor">hh</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> kvsRead_i8(handle_type handle, cb_type cb, value_type &amp;value) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  value = <span class="keyword">static_cast</span>&lt;value_type&gt;(kvs_get_i8(handle, comp_sett.get_kvsKey(cb), <span class="keyword">static_cast</span>&lt;int8_t&gt;(value), 0));</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> kvsRead_u32(handle_type handle, cb_type cb, value_type &amp;value) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  value = <span class="keyword">static_cast</span>&lt;value_type&gt;(kvs_get_u32(handle, comp_sett.get_kvsKey(cb), <span class="keyword">static_cast</span>&lt;uint32_t&gt;(value), 0));</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">bool</span> kvsRead_blob(handle_type h, cb_type cb, value_type &amp;val) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">return</span> kvs_get_object(h, comp_sett.get_kvsKey(cb), val);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> cb_type, size_t dst_size&gt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">bool</span> kvsRead_charArray(handle_type h, cb_type cb, <span class="keywordtype">char</span> (&amp;dst)[dst_size]) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> kvs_get_str(h, comp_sett.get_kvsKey(cb), dst, dst_size);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">bool</span> kvsWrite_blob(handle_type h, cb_type cb, value_type &amp;val) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> kvs_set_blob(h, comp_sett.get_kvsKey(cb), &amp;val, <span class="keyword">sizeof</span> (value_type));</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;config_kvs/config.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">kvs</span><span class="preprocessor">/</span><span class="preprocessor">kvs_wrapper</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">config_kvs</span><span class="preprocessor">/</span><span class="preprocessor">comp_settings</span><span class="preprocessor">.</span><span class="preprocessor">hh</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> kvsRead_i8(handle_type handle, cb_type cb, value_type &amp;value) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  value = <span class="keyword">static_cast</span>&lt;value_type&gt;(kvs_get_i8(handle, comp_sett.get_kvsKey(cb), <span class="keyword">static_cast</span>&lt;int8_t&gt;(value), 0));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> kvsRead_u32(handle_type handle, cb_type cb, value_type &amp;value) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  value = <span class="keyword">static_cast</span>&lt;value_type&gt;(kvs_get_u32(handle, comp_sett.get_kvsKey(cb), <span class="keyword">static_cast</span>&lt;uint32_t&gt;(value), 0));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">bool</span> kvsRead_blob(handle_type h, cb_type cb, value_type &amp;val) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">return</span> kvs_get_object(h, comp_sett.get_kvsKey(cb), val);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> cb_type, size_t dst_size&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">bool</span> kvsRead_charArray(handle_type h, cb_type cb, <span class="keywordtype">char</span> (&amp;dst)[dst_size]) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">return</span> kvs_get_str(h, comp_sett.get_kvsKey(cb), dst, dst_size);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> handle_type, <span class="keyword">typename</span> value_type, <span class="keyword">typename</span> cb_type&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">bool</span> kvsWrite_blob(handle_type h, cb_type cb, value_type &amp;val) {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">return</span> kvs_set_blob(h, comp_sett.get_kvsKey(cb), &amp;val, <span class="keyword">sizeof</span> (value_type));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c999b0683eed430f6c4e221983380c26.html">config_kvs</a></li><li class="navelem"><b>config_kvs.h</b></li>
-    <li class="footer">Generated on Fri Apr 19 2024 11:00:59 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_c999b0683eed430f6c4e221983380c26.html">config_kvs</a></li><li class="navelem"><a class="el" href="config__kvs_8h.html">config_kvs.h</a></li>
+    <li class="footer">Generated on Fri Apr 19 2024 14:27:27 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

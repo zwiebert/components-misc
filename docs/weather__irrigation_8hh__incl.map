@@ -1,0 +1,8 @@
+<map id="weather/weather_irrigation.hh" name="weather/weather_irrigation.hh">
+<area shape="rect" id="node1" title="calculations about when to irrigate based on weather data" alt="" coords="88,5,307,32"/>
+<area shape="rect" id="node2" href="$weather_8hh.html" title="create and maintain weather data archive of last seven days" alt="" coords="150,80,245,107"/>
+<area shape="rect" id="node3" href="$weather__provider_8hh.html" title="Interface for weather data provider." alt="" coords="5,155,160,181"/>
+<area shape="rect" id="node4" href="$weather__data_8hh.html" title="weather data like temperature, humidity, ..." alt="" coords="75,229,205,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="235,155,304,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="109,304,171,331"/>
+</map>

@@ -1,6 +1,6 @@
 var dir_90f955c8a03944eb3aec365380db7be3 =
 [
-    [ "comp_glue.hh", "net_2include_2net_2comp__glue_8hh_source.html", null ],
+    [ "comp_glue.hh", "net_2include_2net_2comp__glue_8hh.html", null ],
     [ "ethernet_setup.hh", "ethernet__setup_8hh.html", "ethernet__setup_8hh" ],
     [ "http_client.h", "http__client_8h.html", "http__client_8h" ],
     [ "ipnet.h", "ipnet_8h.html", "ipnet_8h" ],

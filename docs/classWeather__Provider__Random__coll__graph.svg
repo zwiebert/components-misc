@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Weather_Provider subclass for random mock weather data">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-57.5 149,-57.5 149,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="74.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Weather_Provider_Random</text>
 <polyline fill="none" stroke="black" points="0,-38.5 149,-38.5 "/>
@@ -24,7 +24,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classWeather__Provider.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classWeather__Provider.html" target="_top" xlink:title="Interface class of a weather data provider.">
 <polygon fill="none" stroke="black" points="8.5,-94.5 8.5,-162.5 140.5,-162.5 140.5,-94.5 8.5,-94.5"/>
 <text text-anchor="middle" x="74.5" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">Weather_Provider</text>
 <polyline fill="none" stroke="black" points="8.5,-143.5 140.5,-143.5 "/>

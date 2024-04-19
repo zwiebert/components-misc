@@ -1,7 +1,7 @@
 var dir_a26f80b552a11395da5257dbea821925 =
 [
     [ "esp32", "dir_74ebb2f7df304ed4acb119e443bac11a.html", "dir_74ebb2f7df304ed4acb119e443bac11a" ],
-    [ "comp_glue.hh", "stm32_2include_2stm32_2comp__glue_8hh_source.html", null ],
+    [ "comp_glue.hh", "stm32_2include_2stm32_2comp__glue_8hh.html", null ],
     [ "lock_guard.hh", "lock__guard_8hh_source.html", null ],
     [ "mutex.h", "stm32_2include_2stm32_2mutex_8h.html", "stm32_2include_2stm32_2mutex_8h" ],
     [ "mutex.hh", "stm32_2include_2stm32_2mutex_8hh.html", "stm32_2include_2stm32_2mutex_8hh" ],
