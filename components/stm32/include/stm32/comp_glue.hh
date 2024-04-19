@@ -1,4 +1,5 @@
 /**
+ * \file   stm32/comp_glue.hh
  * \brief  optional header only glue inline functions, to glue components together.
  *         This header is supposed  to be included by an application.
  *
@@ -39,6 +40,12 @@ inline void soCfg_STM32_BOOTGPIO_INV(class UoutWriter &td) {
 }
 #endif
 
+/**
+ * \brief                   Partially initialize applications settings object with this components settings
+ *
+ * \tparam settings_type    type of applications settings object
+ * \param[out] settings     applications settings object
+ */
 template<typename settings_type>
 constexpr void stm32_register_settings(settings_type &settings) {
 #ifdef CONFIG_STM32_USE_COMPONENT

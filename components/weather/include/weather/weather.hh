@@ -1,8 +1,17 @@
+/**
+ * \file    weather/weather.hh
+ * \brief   create and maintain weather data archive of last seven days
+ *
+ */
 #pragma once
 #include "weather_provider.hh"
 #include "weather_data.hh"
 #include <cassert>
 
+/**
+ * \brief   create and maintain weather data archive of last seven days
+ *
+ */
 class Weather {
 public:
   Weather(Weather_Provider *wp=nullptr): m_wp(wp) {

@@ -1,6 +1,16 @@
+/**
+ * \file weather/weather_data.hh
+ * \brief weather data like temperature, humidity, ...
+ */
+
 #pragma once
+
 #include <cstdio>
 
+/**
+ * \brief struct to hold weather data we got from \ref Weather_Provider
+ *
+ */
 struct weather_data {
   struct {
     unsigned humidity = 0;  // relative humidity in percent

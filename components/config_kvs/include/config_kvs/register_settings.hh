@@ -1,8 +1,10 @@
 /**
  * \file config_kvs/register_settings.hh
- * \brief initialize the settings class
+ * \brief initialize the settings object
  *
- * Include this header file into your main setup file and call register_settings()
+ *        Include this header file into your main setup file and call register_settings()
+ *
+ *        The settings data is provided by the comp_glue.hh headers in each component which does want to have settings
  *
  */
 #pragma once
@@ -25,6 +27,12 @@
 #include <txtio/comp_glue.hh>
 #endif
 
+/**
+ * \brief  initializes the settings object by passing it to each component's register_setting() function
+ *
+ * \tparam settings_type       class type of settings object
+ * \param[out] settings        settings object to be initialized
+ */
 template<typename settings_type>
 constexpr void register_settings(settings_type &settings) {
 #if __has_include(<net_http_server/comp_glue.hh>)

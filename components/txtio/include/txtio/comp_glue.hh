@@ -1,4 +1,5 @@
 /**
+ * \file   txtio/comp_glue.hh
  * \brief  optional header only glue inline functions, to glue components together.
  *         This header is supposed  to be included by an application.
  *
@@ -49,6 +50,12 @@ inline void soCfg_VERBOSE(class UoutWriter &td) {
   td.so().print(comp_sett.get_optKeyStr(CB_VERBOSE), config_read_verbose());
 }
 
+/**
+ * \brief                   Partially initialize applications settings object with this components settings
+ *
+ * \tparam settings_type    type of applications settings object
+ * \param[out] settings     applications settings object
+ */
 template<typename settings_type>
 constexpr void txtio_register_settings(settings_type &settings){
     settings.initField(CB_VERBOSE, "C_VERBOSE", otok::k_verbose, CBT_i8, soCfg_VERBOSE, STF_direct);

@@ -101,5 +101,3 @@ bool Weather_Provider_Owm::fetch_owm_data(weather_data &data, const char *url) {
   return false;
 }
 
-Weather_Provider_Owm::~Weather_Provider_Owm() {
-}
