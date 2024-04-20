@@ -22,6 +22,10 @@ menu "zwiebert: CLI"
        bool "add human readable messages to the console output"
        default y
 
+    config APP_USE_CLI_TASK
+        bool
+        default y
+
     config CLI_DEBUG
         bool "Enable debug messages"
         default n

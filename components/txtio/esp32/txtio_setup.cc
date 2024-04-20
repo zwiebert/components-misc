@@ -33,8 +33,6 @@ static const uart_port_t UART_NUM = static_cast<uart_port_t>(CONFIG_ESP_CONSOLE_
 
 typedef int (*writeFn)(const char *, size_t len);
 
-
-
 static int my_uart_write(const char *src, size_t len) {
   return uart_write_bytes(UART_NUM, src, len);
 }
@@ -78,20 +76,12 @@ static int my_write(const char *src, size_t len) {
 
 
 static int  es_io_getc(void) {
-#ifdef CONFIG_APP_USE_CLI_TASK
  return getchar();
-#else
- char c;
- if (read(STDIN_FILENO, &c, 1) == 1)
-   return c;
-
- return -1;
-#endif
 }
 
 
 static int es_io_putc(char c) {
-#ifdef CONFIG_APP_USE_CLI_TASK
+#if 1
   return my_write(&c, 1);
 #else
   return putchar(c);
@@ -220,9 +210,7 @@ static void callback_subscribe(uo_flagsT flags) {
 extern "C++" void txtio_mcu_setup();
 
 void txtio_mcu_setup(struct cfg_txtio *cfg_txtio) {
-#ifdef CONFIG_APP_USE_CLI_TASK
   initialize_console(cfg_txtio);
-#endif
   io_putc_fun = es_io_putc_crlf;
   io_getc_fun = es_io_getc;
   con_printf_fun = ets_printf;
