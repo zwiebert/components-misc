@@ -7,12 +7,12 @@ var structweather__data =
     [ "operator bool", "structweather__data.html#a07171ce7831bbd7df5fddca714fa09e1", null ],
     [ "to_json", "structweather__data.html#a05f223063b22338504730e37529b2fc2", null ],
     [ "all", "structweather__data.html#a6464642bb79a45609f348013718c5a7a", null ],
-    [ "clouds", "structweather__data.html#a0c9a6912fc695e9ad263bcbec29b3a60", null ],
+    [ "clouds", "structweather__data.html#a42de8dd3a223de8ac261b7725248e007", null ],
     [ "deg", "structweather__data.html#ad3a034b749b5fe32296dfaaf9c484251", null ],
     [ "humidity", "structweather__data.html#a8e2f604eb2f06d37a208635fdc3a8545", null ],
-    [ "main", "structweather__data.html#a61f6d2388ea772c1060e64dccb320dee", null ],
+    [ "main", "structweather__data.html#a909a71e5c4ac84dcbe01520b22b8f87d", null ],
     [ "pressure", "structweather__data.html#abdc5fc17ec4c49a89d83eabaa681dc45", null ],
     [ "speed", "structweather__data.html#a029c4122e169ba92a293c5f6ab751506", null ],
     [ "temp", "structweather__data.html#aae91d4906b43d7aec6adf57c3380085b", null ],
-    [ "wind", "structweather__data.html#a9d062a8381895f1545f4d786a289db49", null ]
+    [ "wind", "structweather__data.html#a06eb3de9a232e24fc91d29a6177192c1", null ]
 ];

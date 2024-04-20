@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['json_572',['json',['../structuo__flagsT.html#a2811d096b357df42f114a5b982585414',1,'uo_flagsT']]]
+  ['quote_5fcount_382',['quote_count',['../structcli__buf.html#a1553728122e14583aa3a7497672258dd',1,'cli_buf']]]
 ];

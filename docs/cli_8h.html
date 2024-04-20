@@ -92,29 +92,30 @@ $(document).ready(function(){initNavTree('cli_8h.html',''); initResizable(); });
 
 <p>cli framework  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="uo__types_8h_source.html">uout/uo_types.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;uout/uo_types.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="cli__types_8h_source.html">cli_types.h</a>&quot;</code><br />
 <code>#include &lt;jsmn/jsmn_iterate.hh&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for cli.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="cli_8h__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="cli_8h__incl.svg" width="439" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="cli_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1ec13090cd5dea5a0eb8fda4d6b30f72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a> (<a class="el" href="structclpar.html">clpar</a> p[], int len, class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td)</td></tr>
+<tr class="memitem:a1ec13090cd5dea5a0eb8fda4d6b30f72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a> (<a class="el" href="structclpar.html">clpar</a> p[], int len, class UoutWriter &amp;td)</td></tr>
 <tr class="memdesc:a1ec13090cd5dea5a0eb8fda4d6b30f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">dispatch the parsed parameter list to its respective handler  <a href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">More...</a><br /></td></tr>
 <tr class="separator:a1ec13090cd5dea5a0eb8fda4d6b30f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9d6df4e5f41af939b10cafcd0465862"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="cli__types_8h.html#ac9abc318da72b474477d94a30de55071">cli_get_commline_retT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#ae9d6df4e5f41af939b10cafcd0465862">cli_get_commandline</a> (struct <a class="el" href="structcli__buf.html">cli_buf</a> *buf, <a class="el" href="cli__types_8h.html#a6547e6b23ee6fa2c6c8a0571dd3725ce">getc_funT</a> getc_fun)</td></tr>
 <tr class="memdesc:ae9d6df4e5f41af939b10cafcd0465862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a command line from a console. Allows quoting strings and backspace to edit typos.  <a href="cli_8h.html#ae9d6df4e5f41af939b10cafcd0465862">More...</a><br /></td></tr>
 <tr class="separator:ae9d6df4e5f41af939b10cafcd0465862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef97ecb98733595850ad20892b999c47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aef97ecb98733595850ad20892b999c47">cli_process_cmdline</a> (char *line, class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td, <a class="el" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm=<a class="el" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>)</td></tr>
+<tr class="memitem:aef97ecb98733595850ad20892b999c47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aef97ecb98733595850ad20892b999c47">cli_process_cmdline</a> (char *line, class UoutWriter &amp;td, <a class="el" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm=<a class="el" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>)</td></tr>
 <tr class="memdesc:aef97ecb98733595850ad20892b999c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a command line and process it.  <a href="cli_8h.html#aef97ecb98733595850ad20892b999c47">More...</a><br /></td></tr>
 <tr class="separator:aef97ecb98733595850ad20892b999c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc1eefee6aefb5bf661071a5f9de58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aefc1eefee6aefb5bf661071a5f9de58d">cli_process_json</a> (char *json, class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td, <a class="el" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm=<a class="el" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>)</td></tr>
+<tr class="memitem:aefc1eefee6aefb5bf661071a5f9de58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aefc1eefee6aefb5bf661071a5f9de58d">cli_process_json</a> (char *json, class UoutWriter &amp;td, <a class="el" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm=<a class="el" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>)</td></tr>
 <tr class="memdesc:aefc1eefee6aefb5bf661071a5f9de58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a JSON command "line" and process it.  <a href="cli_8h.html#aefc1eefee6aefb5bf661071a5f9de58d">More...</a><br /></td></tr>
 <tr class="separator:aefc1eefee6aefb5bf661071a5f9de58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd8d87d3bb455b52554b9852f7dbc186"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#acd8d87d3bb455b52554b9852f7dbc186">cliBuf_enlarge</a> (struct <a class="el" href="structcli__buf.html">cli_buf</a> *buf)</td></tr>
@@ -140,13 +141,13 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
 <tr class="memitem:a4b1c34168f5027ebf68320dfa4b5e2b7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structparm__handler.html">parm_handler</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#a4b1c34168f5027ebf68320dfa4b5e2b7">cli_parmHandler_find_cb</a> )(const char *key)</td></tr>
 <tr class="memdesc:a4b1c34168f5027ebf68320dfa4b5e2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide this callback to map a parameter name to a parameter handler.  <a href="cli_8h.html#a4b1c34168f5027ebf68320dfa4b5e2b7">More...</a><br /></td></tr>
 <tr class="separator:a4b1c34168f5027ebf68320dfa4b5e2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79e54d28efe1750453a4bbff3fbf29e"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aa79e54d28efe1750453a4bbff3fbf29e">cli_hook_checkPassword</a> )(<a class="el" href="structclpar.html">clpar</a> p[], int len, class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td)</td></tr>
+<tr class="memitem:aa79e54d28efe1750453a4bbff3fbf29e"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aa79e54d28efe1750453a4bbff3fbf29e">cli_hook_checkPassword</a> )(<a class="el" href="structclpar.html">clpar</a> p[], int len, class UoutWriter &amp;td)</td></tr>
 <tr class="memdesc:aa79e54d28efe1750453a4bbff3fbf29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this optional callback to verify the cli password. Its called after parsing is done.  <a href="cli_8h.html#aa79e54d28efe1750453a4bbff3fbf29e">More...</a><br /></td></tr>
 <tr class="separator:aa79e54d28efe1750453a4bbff3fbf29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cdc68f6b656e7a8504bb61f0e576db1"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#a3cdc68f6b656e7a8504bb61f0e576db1">cli_hook_process_json</a> )(char *json)</td></tr>
 <tr class="memdesc:a3cdc68f6b656e7a8504bb61f0e576db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this to hook into <a class="el" href="cli_8h.html#aefc1eefee6aefb5bf661071a5f9de58d">cli_process_json</a>.  <a href="cli_8h.html#a3cdc68f6b656e7a8504bb61f0e576db1">More...</a><br /></td></tr>
 <tr class="separator:a3cdc68f6b656e7a8504bb61f0e576db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba4a2913923c5e728fe6482f2ce776b8"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aba4a2913923c5e728fe6482f2ce776b8">cli_hook_process_json_obj</a> )(class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td, Jsmn_String::Iterator &amp;it)</td></tr>
+<tr class="memitem:aba4a2913923c5e728fe6482f2ce776b8"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli_8h.html#aba4a2913923c5e728fe6482f2ce776b8">cli_hook_process_json_obj</a> )(class UoutWriter &amp;td, Jsmn_String::Iterator &amp;it)</td></tr>
 <tr class="memdesc:aba4a2913923c5e728fe6482f2ce776b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set this to get an iterator to the "json" command object.  <a href="cli_8h.html#aba4a2913923c5e728fe6482f2ce776b8">More...</a><br /></td></tr>
 <tr class="separator:aba4a2913923c5e728fe6482f2ce776b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -234,7 +235,7 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;&#160;</td>
+          <td class="paramtype">class UoutWriter &amp;&#160;</td>
           <td class="paramname"><em>td</em>, </td>
         </tr>
         <tr>
@@ -280,7 +281,7 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;&#160;</td>
+          <td class="paramtype">class UoutWriter &amp;&#160;</td>
           <td class="paramname"><em>td</em>, </td>
         </tr>
         <tr>
@@ -332,7 +333,7 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;&#160;</td>
+          <td class="paramtype">class UoutWriter &amp;&#160;</td>
           <td class="paramname"><em>td</em>&#160;</td>
         </tr>
         <tr>
@@ -420,7 +421,7 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool(* cli_hook_checkPassword) (<a class="el" href="structclpar.html">clpar</a> p[], int len, class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td) </td>
+          <td class="memname">bool(* cli_hook_checkPassword) (<a class="el" href="structclpar.html">clpar</a> p[], int len, class UoutWriter &amp;td) </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structclpar.html">clpar</a>&#160;</td>
           <td class="paramname"><em>p</em>[], </td>
@@ -434,7 +435,7 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;&#160;</td>
+          <td class="paramtype">class UoutWriter &amp;&#160;</td>
           <td class="paramname"><em>td</em>&#160;</td>
         </tr>
         <tr>
@@ -506,9 +507,9 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool(* cli_hook_process_json_obj) (class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;td, Jsmn_String::Iterator &amp;it) </td>
+          <td class="memname">bool(* cli_hook_process_json_obj) (class UoutWriter &amp;td, Jsmn_String::Iterator &amp;it) </td>
           <td>(</td>
-          <td class="paramtype">class <a class="el" href="classUoutWriter.html">UoutWriter</a> &amp;&#160;</td>
+          <td class="paramtype">class UoutWriter &amp;&#160;</td>
           <td class="paramname"><em>td</em>, </td>
         </tr>
         <tr>
@@ -584,7 +585,7 @@ const struct <a class="el" href="structparm__handlers.html">parm_handlers</a> *&
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_649b7989129a4cf8f8cd271a72d3566e.html">cli</a></li><li class="navelem"><a class="el" href="cli_8h.html">cli.h</a></li>
-    <li class="footer">Generated on Fri Apr 19 2024 15:24:55 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat Apr 20 2024 13:36:58 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> * \param p,len      parameter list</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> * \return           if it returns true, only then the parsed parameters will be processed.</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> (*<a class="code" href="cli_8h.html#aa79e54d28efe1750453a4bbff3fbf29e">cli_hook_checkPassword</a>)(clpar p[], <span class="keywordtype">int</span> len, <span class="keyword">class</span> <a class="code" href="classUoutWriter.html">UoutWriter</a> &amp;td);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> (*<a class="code" href="cli_8h.html#aa79e54d28efe1750453a4bbff3fbf29e">cli_hook_checkPassword</a>)(clpar p[], <span class="keywordtype">int</span> len, <span class="keyword">class</span> UoutWriter &amp;td);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * \brief dispatch the parsed parameter list to its respective handler</span></div>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * \param td         target descriptor to print any output to</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * \returns          If an error occurs, the result will be -1.</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">int</span> <a class="code" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>(clpar p[], <span class="keywordtype">int</span> len, <span class="keyword">class</span> <a class="code" href="classUoutWriter.html">UoutWriter</a> &amp;td);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">int</span> <a class="code" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>(clpar p[], <span class="keywordtype">int</span> len, <span class="keyword">class</span> UoutWriter &amp;td);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * \brief Set this to hook into \link cli_process_json \endlink</span></div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * \param it        reference to iterator copy. the state/position at return does not matter</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * \return          if false is returned the object may be processed differently.</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> (*<a class="code" href="cli_8h.html#aba4a2913923c5e728fe6482f2ce776b8">cli_hook_process_json_obj</a>)(<span class="keyword">class</span> <a class="code" href="classUoutWriter.html">UoutWriter</a> &amp;td, Jsmn_String::Iterator &amp;it);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">bool</span> (*<a class="code" href="cli_8h.html#aba4a2913923c5e728fe6482f2ce776b8">cli_hook_process_json_obj</a>)(<span class="keyword">class</span> UoutWriter &amp;td, Jsmn_String::Iterator &amp;it);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * \brief            Gets a command line from a console. Allows quoting strings and backspace to edit typos.</span></div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> * \return</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cli_8h.html#aef97ecb98733595850ad20892b999c47">cli_process_cmdline</a>(<span class="keywordtype">char</span> *line, <span class="keyword">class</span> <a class="code" href="classUoutWriter.html">UoutWriter</a> &amp;td, <a class="code" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm = <a class="code" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cli_8h.html#aef97ecb98733595850ad20892b999c47">cli_process_cmdline</a>(<span class="keywordtype">char</span> *line, <span class="keyword">class</span> UoutWriter &amp;td, <a class="code" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm = <a class="code" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> * \brief            Parse a JSON command &quot;line&quot; and process it</span></div>
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * \return</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cli_8h.html#aefc1eefee6aefb5bf661071a5f9de58d">cli_process_json</a>(<span class="keywordtype">char</span> *json, <span class="keyword">class</span> <a class="code" href="classUoutWriter.html">UoutWriter</a> &amp;td, <a class="code" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm = <a class="code" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cli_8h.html#aefc1eefee6aefb5bf661071a5f9de58d">cli_process_json</a>(<span class="keywordtype">char</span> *json, <span class="keyword">class</span> UoutWriter &amp;td, <a class="code" href="cli__types_8h.html#a7fb8f1ee88e0ac52fae5c63e332f626d">process_parm_cb</a> proc_parm = <a class="code" href="cli_8h.html#a1ec13090cd5dea5a0eb8fda4d6b30f72">cli_processParameters</a>);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">/**</span></div>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('cli_8h_source.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_649b7989129a4cf8f8cd271a72d3566e.html">cli</a></li><li class="navelem"><a class="el" href="cli_8h.html">cli.h</a></li>
-    <li class="footer">Generated on Fri Apr 19 2024 15:24:55 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sat Apr 20 2024 13:36:57 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

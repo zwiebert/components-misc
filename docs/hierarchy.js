@@ -16,8 +16,6 @@ var hierarchy =
       [ "FileContentReader", "classFileContentReader.html", null ]
     ] ],
     [ "file_map", "structfile__map.html", null ],
-    [ "LogMessage", "structLogMessage.html", null ],
-    [ "UoutRawWriter::mod", "structUoutRawWriter_1_1mod.html", null ],
     [ "Net_Mqtt", "classNet__Mqtt.html", null ],
     [ "parm_handler", "structparm__handler.html", null ],
     [ "parm_handlers", "structparm__handlers.html", null ],
@@ -27,7 +25,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "SettingsData", "structSettingsData.html", null ],
-    [ "so_arg_pch_t", "structso__arg__pch__t.html", null ],
     [ "Stm32_Bootloader", "classStm32__Bootloader.html", null ],
     [ "stm32_lock_guard< _Mutex >", "classstm32__lock__guard.html", null ],
     [ "Stm32_Uart_if", "classStm32__Uart__if.html", [
@@ -35,21 +32,6 @@ var hierarchy =
         [ "Stm32_Uart_ESP32", "classStm32__Uart__ESP32.html", null ]
       ] ],
       [ "Stm32_Uart_Ts", "classStm32__Uart__Ts.html", null ]
-    ] ],
-    [ "uo_flagsT", "structuo__flagsT.html", null ],
-    [ "uoCb_cbsT", "structuoCb__cbsT.html", null ],
-    [ "uoCb_Idxs", "structuoCb__Idxs.html", null ],
-    [ "uoCb_msgT", "structuoCb__msgT.html", null ],
-    [ "UoutBuilderJson", "classUoutBuilderJson.html", null ],
-    [ "UoutBuilderPlaintext", "classUoutBuilderPlaintext.html", null ],
-    [ "UoutPrinter", "classUoutPrinter.html", null ],
-    [ "UoutRawWriter", "classUoutRawWriter.html", [
-      [ "UoutWriter", "classUoutWriter.html", [
-        [ "UoutWriterBuilder", "classUoutWriterBuilder.html", null ],
-        [ "UoutWriterConsole", "classUoutWriterConsole.html", null ],
-        [ "UoutWriterFile", "classUoutWriterFile.html", null ],
-        [ "UoutWriterFunction", "classUoutWriterFunction.html", null ]
-      ] ]
     ] ],
     [ "Weather::wday_hour", "structWeather_1_1wday__hour.html", null ],
     [ "Weather", "classWeather.html", [
