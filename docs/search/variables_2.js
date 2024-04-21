@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enable_369',['enable',['../structcfg__tcps.html#afedf6f6cd411ef175d41c1a7fd5de375',1,'cfg_tcps::enable()'],['../structcfg__http.html#a86483e2108c3a350fd47c1d65cd3363f',1,'cfg_http::enable()']]]
+  ['flags_236',['flags',['../structcfg__txtio.html#ac7d6c04e0de28cbfdec3dbf200422724',1,'cfg_txtio']]]
 ];

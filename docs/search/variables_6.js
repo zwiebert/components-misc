@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quote_5fcount_382',['quote_count',['../structcli__buf.html#a1553728122e14583aa3a7497672258dd',1,'cli_buf']]]
+  ['reset_5fgpio_244',['reset_gpio',['../structcfg__stm32.html#aa133ed95bbffdb3568361826bef2c399',1,'cfg_stm32']]]
 ];

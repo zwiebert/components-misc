@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['ipnet_2eh_81',['ipnet.h',['../ipnet_8h.html',1,'']]],
-  ['ipnet_5fcb_82',['ipnet_cb',['../ipnet_8h.html#a84de52dba616f6d3150a4d91aba63754',1,'ipnet.h']]],
-  ['ipnet_5fcbregister_5fgotipaddr_83',['ipnet_cbRegister_gotIpAddr',['../ipnet_8h.html#a9c243b82c14ac23f81a9abe641047e71',1,'ipnet.h']]],
-  ['ipnet_5fcbregister_5flostipaddr_84',['ipnet_cbRegister_lostIpAddr',['../ipnet_8h.html#adb4bf1fb66c069b95ecd66ecfc243672',1,'ipnet.h']]],
-  ['ipnet_5fconnected_85',['ipnet_connected',['../ipnet_8h.html#ae4c6f2e11b1481243fa14107312c4766',1,'ipnet.h']]],
-  ['ipnet_5fdisconnected_86',['ipnet_disconnected',['../ipnet_8h.html#acd2910e9672a3c708ddf789551fc5542',1,'ipnet.h']]],
-  ['ipnet_5fisconnected_87',['ipnet_isConnected',['../ipnet_8h.html#a087891df88cf0ace25c26438aa936db7',1,'ipnet.h']]]
+  ['ota_2eh_52',['ota.h',['../ota_8h.html',1,'']]],
+  ['ota_5fdoupdate_53',['ota_doUpdate',['../ota_8h.html#a3fb2e797716a3a8e19e67095bc387e51',1,'ota.h']]],
+  ['ota_5fgetstate_54',['ota_getState',['../ota_8h.html#a1d0737883dab0a4d33dc5795ea63b280',1,'ota.h']]],
+  ['ota_5fstate_5ft_55',['ota_state_T',['../ota_8h.html#adf8fbd9e1a2185a69bbc7e54c0a7d727',1,'ota.h']]]
 ];

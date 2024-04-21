@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['load_5fpast_5fweather_5fdata_306',['load_past_weather_data',['../classWeather.html#aa674e1f88f3e8414d952eb218987e674',1,'Weather']]]
+  ['to_5fjson_224',['to_json',['../classWeather.html#a4dbf3ef280e474a0a741623f35fcaeeb',1,'Weather']]]
 ];

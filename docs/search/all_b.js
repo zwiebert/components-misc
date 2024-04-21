@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['net_5fmqtt_93',['Net_Mqtt',['../classNet__Mqtt.html',1,'']]],
-  ['ntp_5fclient_5fsetup_2ehh_94',['ntp_client_setup.hh',['../ntp__client__setup_8hh.html',1,'']]],
-  ['ntp_5fsetup_95',['ntp_setup',['../ntp__client__setup_8hh.html#a8554de7b421d74d930f7f1d338b6f77f',1,'ntp_client_setup.hh']]]
+  ['register_5fsettings_2ehh_69',['register_settings.hh',['../register__settings_8hh.html',1,'']]],
+  ['reset_5fgpio_70',['reset_gpio',['../structcfg__stm32.html#aa133ed95bbffdb3568361826bef2c399',1,'cfg_stm32']]]
 ];

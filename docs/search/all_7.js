@@ -1,14 +1,5 @@
 var searchData=
 [
-  ['handlers_70',['handlers',['../structparm__handlers.html#a3ecc66c51a40a0b74c9736afd833c391',1,'parm_handlers']]],
-  ['help_71',['help',['../structparm__handler.html#a52d1b1023bf133b92f9467641378e72c',1,'parm_handler']]],
-  ['hour_72',['hour',['../structWeather_1_1wday__hour.html#aaaef495737f6afd5374ba631b5d89586',1,'Weather::wday_hour']]],
-  ['hts_5fregister_5furi_5fhandlers_5fcb_73',['hts_register_uri_handlers_cb',['../http__server__esp32_8h.html#a57117a7fbe19776c853bef70bac85683',1,'http_server_esp32.h']]],
-  ['hts_5fserver_74',['hts_server',['../http__server__esp32_8h.html#ad22c7aac786934d776377e99e7ab6976',1,'http_server_esp32.h']]],
-  ['hts_5fsetup_75',['hts_setup',['../http__server__setup_8h.html#ae22040b6f93bd216cb8d5a14f344e1bf',1,'http_server_setup.h']]],
-  ['http_5fclient_2eh_76',['http_client.h',['../http__client_8h.html',1,'']]],
-  ['http_5fserver_5fesp32_2eh_77',['http_server_esp32.h',['../http__server__esp32_8h.html',1,'']]],
-  ['http_5fserver_5fsetup_2eh_78',['http_server_setup.h',['../http__server__setup_8h.html',1,'']]],
-  ['httpclient_5fdownloadfile_79',['httpClient_downloadFile',['../http__client_8h.html#ae066c825270a07e50ca380e0fddad77c',1,'http_client.h']]],
-  ['httpclient_5fgettobuffer_80',['httpClient_getToBuffer',['../http__client_8h.html#a9aff837188ef888f5f64e99c2d984e34',1,'http_client.h']]]
+  ['mutex_2eh_50',['mutex.h',['../stm32_2include_2stm32_2mutex_8h.html',1,'']]],
+  ['mutex_2ehh_51',['mutex.hh',['../stm32_2include_2stm32_2mutex_8hh.html',1,'']]]
 ];

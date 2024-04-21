@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['fetch_5fand_5fstore_5fweather_5fdata_287',['fetch_and_store_weather_data',['../classWeather.html#ac29feb87779193af71e7f867311163a2',1,'Weather']]],
-  ['fetch_5fowm_5fdata_288',['fetch_owm_data',['../classWeather__Provider__Owm.html#a7b882bfface4707ee80b8ddd1828ad6c',1,'Weather_Provider_Owm']]],
-  ['fetch_5fweather_5fdata_289',['fetch_weather_data',['../classWeather__Provider.html#aa223f2b1670668139abe934f1595ef33',1,'Weather_Provider::fetch_weather_data()'],['../classWeather__Provider__Owm.html#adf8f0160dba4445f50a0f94be42ca11c',1,'Weather_Provider_Owm::fetch_weather_data()'],['../classWeather__Provider__Random.html#aa4414e967257e83fe0d62619ba40c550',1,'Weather_Provider_Random::fetch_weather_data()']]]
+  ['load_5fpast_5fweather_5fdata_194',['load_past_weather_data',['../classWeather.html#aa674e1f88f3e8414d952eb218987e674',1,'Weather']]]
 ];

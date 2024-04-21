@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['mqtt_2ehh_90',['mqtt.hh',['../mqtt_8hh.html',1,'']]],
-  ['mutex_2eh_91',['mutex.h',['../stm32_2include_2stm32_2mutex_8h.html',1,'']]],
-  ['mutex_2ehh_92',['mutex.hh',['../stm32_2include_2stm32_2mutex_8hh.html',1,'']]]
+  ['quote_5fcount_68',['quote_count',['../structcli__buf.html#a1553728122e14583aa3a7497672258dd',1,'cli_buf']]]
 ];

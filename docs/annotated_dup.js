@@ -1,21 +1,11 @@
 var annotated_dup =
 [
-    [ "cfg_http", "structcfg__http.html", "structcfg__http" ],
-    [ "cfg_lan", "structcfg__lan.html", "structcfg__lan" ],
-    [ "cfg_mqtt", "structcfg__mqtt.html", "structcfg__mqtt" ],
-    [ "cfg_ntp", "structcfg__ntp.html", "structcfg__ntp" ],
     [ "cfg_stm32", "structcfg__stm32.html", "structcfg__stm32" ],
-    [ "cfg_tcps", "structcfg__tcps.html", "structcfg__tcps" ],
     [ "cfg_txtio", "structcfg__txtio.html", "structcfg__txtio" ],
-    [ "cfg_wlan", "structcfg__wlan.html", null ],
     [ "cli_buf", "structcli__buf.html", "structcli__buf" ],
     [ "cli_parm", "structcli__parm.html", "structcli__parm" ],
     [ "clpar", "structclpar.html", "structclpar" ],
     [ "Config_Item", "classConfig__Item.html", null ],
-    [ "ContentReader", "classContentReader.html", "classContentReader" ],
-    [ "file_map", "structfile__map.html", "structfile__map" ],
-    [ "FileContentReader", "classFileContentReader.html", "classFileContentReader" ],
-    [ "Net_Mqtt", "classNet__Mqtt.html", "classNet__Mqtt" ],
     [ "parm_handler", "structparm__handler.html", "structparm__handler" ],
     [ "parm_handlers", "structparm__handlers.html", "structparm__handlers" ],
     [ "Settings", "classSettings.html", "classSettings" ],
@@ -34,6 +24,5 @@ var annotated_dup =
     [ "Weather_Irrigation", "classWeather__Irrigation.html", "classWeather__Irrigation" ],
     [ "Weather_Provider", "classWeather__Provider.html", "classWeather__Provider" ],
     [ "Weather_Provider_Owm", "classWeather__Provider__Owm.html", "classWeather__Provider__Owm" ],
-    [ "Weather_Provider_Random", "classWeather__Provider__Random.html", "classWeather__Provider__Random" ],
-    [ "web_content", "structweb__content.html", "structweb__content" ]
+    [ "Weather_Provider_Random", "classWeather__Provider__Random.html", "classWeather__Provider__Random" ]
 ];

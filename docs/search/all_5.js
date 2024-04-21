@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['fetch_5fand_5fstore_5fweather_5fdata_55',['fetch_and_store_weather_data',['../classWeather.html#ac29feb87779193af71e7f867311163a2',1,'Weather']]],
-  ['fetch_5fowm_5fdata_56',['fetch_owm_data',['../classWeather__Provider__Owm.html#a7b882bfface4707ee80b8ddd1828ad6c',1,'Weather_Provider_Owm']]],
-  ['fetch_5fweather_5fdata_57',['fetch_weather_data',['../classWeather__Provider.html#aa223f2b1670668139abe934f1595ef33',1,'Weather_Provider::fetch_weather_data()'],['../classWeather__Provider__Owm.html#adf8f0160dba4445f50a0f94be42ca11c',1,'Weather_Provider_Owm::fetch_weather_data()'],['../classWeather__Provider__Random.html#aa4414e967257e83fe0d62619ba40c550',1,'Weather_Provider_Random::fetch_weather_data()']]],
-  ['file_5fmap_58',['file_map',['../structfile__map.html',1,'']]],
-  ['filecontentreader_59',['FileContentReader',['../classFileContentReader.html',1,'']]],
-  ['flags_60',['flags',['../structcfg__tcps.html#a7c19600d2c637d2d99d6aedee72effea',1,'cfg_tcps::flags()'],['../structcfg__txtio.html#ac7d6c04e0de28cbfdec3dbf200422724',1,'cfg_txtio::flags()']]]
+  ['handlers_46',['handlers',['../structparm__handlers.html#a3ecc66c51a40a0b74c9736afd833c391',1,'parm_handlers']]],
+  ['help_47',['help',['../structparm__handler.html#a52d1b1023bf133b92f9467641378e72c',1,'parm_handler']]],
+  ['hour_48',['hour',['../structWeather_1_1wday__hour.html#aaaef495737f6afd5374ba631b5d89586',1,'Weather::wday_hour']]]
 ];
