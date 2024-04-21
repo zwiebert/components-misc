@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="stm32__ota_8h.html" target="_top" xlink:title="download and update firmware of the connected STM32">
+<g id="a_node2"><a xlink:href="stm32__ota_8h.html" target="_top" xlink:title="download stm32 firmware.bin and flash it to the STM32 via UART using the stm32 boot&#45;loader">
 <polygon fill="none" stroke="black" points="7,-56.5 7,-75.5 118,-75.5 118,-56.5 7,-56.5"/>
 <text text-anchor="middle" x="62.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">stm32/stm32_ota.h</text>
 </a>

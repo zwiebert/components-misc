@@ -13,7 +13,6 @@ var annotated_dup =
     [ "SettingsBase", "classSettingsBase.html", "classSettingsBase" ],
     [ "SettingsData", "structSettingsData.html", "structSettingsData" ],
     [ "stm32_lock_guard", "classstm32__lock__guard.html", "classstm32__lock__guard" ],
-    [ "Stm32_Uart", "classStm32__Uart.html", "classStm32__Uart" ],
     [ "Stm32_Uart_if", "classStm32__Uart__if.html", "classStm32__Uart__if" ],
     [ "Weather", "classWeather.html", "classWeather" ],
     [ "Weather_Adapter_Neutral", "classWeather__Adapter__Neutral.html", "classWeather__Adapter__Neutral" ],

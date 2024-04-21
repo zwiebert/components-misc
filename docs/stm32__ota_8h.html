@@ -91,18 +91,20 @@ $(document).ready(function(){initNavTree('stm32__ota_8h.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p>download and update firmware of the connected STM32  
+<p>download stm32 firmware.bin and flash it to the STM32 via UART using the stm32 boot-loader  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for stm32_ota.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="stm32__ota_8h__incl.svg" width="159" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="stm32__ota_8h__incl.svg" width="159" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="stm32__ota_8h__dep__incl.svg" width="178" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="stm32__ota_8h__dep__incl.svg" width="178" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="stm32__ota_8h_source.html">Go to the source code of this file.</a></p>
@@ -110,46 +112,187 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2bec71d5c1f788835dab07768e73d53e"><td class="memItemLeft" align="right" valign="top"><a id="a2bec71d5c1f788835dab07768e73d53e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STM32_FW_FILE_NAME</b>&#160;&#160;&#160;&quot;/spiffs/rv.bin&quot;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a2bec71d5c1f788835dab07768e73d53e">STM32_FW_FILE_NAME</a>&#160;&#160;&#160;&quot;/spiffs/rv.bin&quot;</td></tr>
+<tr class="memdesc:a2bec71d5c1f788835dab07768e73d53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">file path to store firmware image by <a class="el" href="stm32__ota_8h.html#a9b136ba0858dafc447685788e0cc6b0d">stm32ota_doUpdate</a> <br /></td></tr>
 <tr class="separator:a2bec71d5c1f788835dab07768e73d53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a028b805607099ab726f14404e055d544"><td class="memItemLeft" align="right" valign="top"><a id="a028b805607099ab726f14404e055d544"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>stm32ota_state_T</b> { <b>stm32ota_NONE</b>
-, <b>stm32ota_RUN</b>
-, <b>stm32ota_FAIL</b>
-, <b>stm32ota_DONE</b>
+<tr class="memitem:a028b805607099ab726f14404e055d544"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544">stm32ota_state_T</a> { <a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544a6e4ff79f502bd8c01d3a4eea301e1b52">stm32ota_NONE</a>
+, <a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544aa393551c64069b17ab71fbf75a1d77e3">stm32ota_RUN</a>
+, <a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544ad6d726159f440330c61f00d4f44c0c1a">stm32ota_FAIL</a>
+, <a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544a3de7872375a11fb4e940c494da113abc">stm32ota_DONE</a>
  }</td></tr>
+<tr class="memdesc:a028b805607099ab726f14404e055d544"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of running or stopped over the air update task.  <a href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544">More...</a><br /></td></tr>
 <tr class="separator:a028b805607099ab726f14404e055d544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ace2ab8accab45ec54f607d9f87258df0"><td class="memItemLeft" align="right" valign="top"><a id="ace2ab8accab45ec54f607d9f87258df0"></a>
-stm32ota_state_T&#160;</td><td class="memItemRight" valign="bottom"><b>stm32ota_getState</b> (void)</td></tr>
-<tr class="separator:ace2ab8accab45ec54f607d9f87258df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9c34fd3fe201eaa4e2fb10cebd3a9b0"><td class="memItemLeft" align="right" valign="top"><a id="af9c34fd3fe201eaa4e2fb10cebd3a9b0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#af9c34fd3fe201eaa4e2fb10cebd3a9b0">stm32Ota_firmwareUpdate</a> (const char *file_name)</td></tr>
-<tr class="memdesc:af9c34fd3fe201eaa4e2fb10cebd3a9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the STM32 firmware from a FILE <br /></td></tr>
+<tr class="memitem:a19b88cad54601fca469d6687a93e2004"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544">stm32ota_state_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a19b88cad54601fca469d6687a93e2004">stm32ota_getState</a> ()</td></tr>
+<tr class="memdesc:a19b88cad54601fca469d6687a93e2004"><td class="mdescLeft">&#160;</td><td class="mdescRight">get current state of the over the air update process  <a href="stm32__ota_8h.html#a19b88cad54601fca469d6687a93e2004">More...</a><br /></td></tr>
+<tr class="separator:a19b88cad54601fca469d6687a93e2004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c34fd3fe201eaa4e2fb10cebd3a9b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#af9c34fd3fe201eaa4e2fb10cebd3a9b0">stm32Ota_firmwareUpdate</a> (const char *file_name)</td></tr>
+<tr class="memdesc:af9c34fd3fe201eaa4e2fb10cebd3a9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the STM32 firmware from internal file system  <a href="stm32__ota_8h.html#af9c34fd3fe201eaa4e2fb10cebd3a9b0">More...</a><br /></td></tr>
 <tr class="separator:af9c34fd3fe201eaa4e2fb10cebd3a9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8530b699466e80d4a6904a853cc4a791"><td class="memItemLeft" align="right" valign="top"><a id="a8530b699466e80d4a6904a853cc4a791"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a8530b699466e80d4a6904a853cc4a791">stm32Ota_firmwareDownload</a> (const char *url, const char *file_name)</td></tr>
-<tr class="memdesc:a8530b699466e80d4a6904a853cc4a791"><td class="mdescLeft">&#160;</td><td class="mdescRight">just fetch the STM32 firmware from URL and store it to a FILE (FIXME: add https support) <br /></td></tr>
+<tr class="memitem:a8530b699466e80d4a6904a853cc4a791"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a8530b699466e80d4a6904a853cc4a791">stm32Ota_firmwareDownload</a> (const char *url, const char *file_name)</td></tr>
+<tr class="memdesc:a8530b699466e80d4a6904a853cc4a791"><td class="mdescLeft">&#160;</td><td class="mdescRight">download (firmware) to internal file system using HTTP  <a href="stm32__ota_8h.html#a8530b699466e80d4a6904a853cc4a791">More...</a><br /></td></tr>
 <tr class="separator:a8530b699466e80d4a6904a853cc4a791"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b136ba0858dafc447685788e0cc6b0d"><td class="memItemLeft" align="right" valign="top"><a id="a9b136ba0858dafc447685788e0cc6b0d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a9b136ba0858dafc447685788e0cc6b0d">stm32ota_doUpdate</a> (const char *firmware_url)</td></tr>
-<tr class="memdesc:a9b136ba0858dafc447685788e0cc6b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">do the complete STM32 firmware update from given URL <br /></td></tr>
+<tr class="memitem:a9b136ba0858dafc447685788e0cc6b0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32__ota_8h.html#a9b136ba0858dafc447685788e0cc6b0d">stm32ota_doUpdate</a> (const char *firmware_url)</td></tr>
+<tr class="memdesc:a9b136ba0858dafc447685788e0cc6b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start a task which does the complete STM32 firmware update from given URL.  <a href="stm32__ota_8h.html#a9b136ba0858dafc447685788e0cc6b0d">More...</a><br /></td></tr>
 <tr class="separator:a9b136ba0858dafc447685788e0cc6b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>download and update firmware of the connected STM32 </p>
+<div class="textblock"><p>download stm32 firmware.bin and flash it to the STM32 via UART using the stm32 boot-loader </p>
 <dl class="section author"><dt>Author</dt><dd>bertw </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a028b805607099ab726f14404e055d544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028b805607099ab726f14404e055d544">&#9670;&nbsp;</a></span>stm32ota_state_T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544">stm32ota_state_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>State of running or stopped over the air update task. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a028b805607099ab726f14404e055d544a6e4ff79f502bd8c01d3a4eea301e1b52"></a>stm32ota_NONE&#160;</td><td class="fielddoc"><p>no OTA task was started </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a028b805607099ab726f14404e055d544aa393551c64069b17ab71fbf75a1d77e3"></a>stm32ota_RUN&#160;</td><td class="fielddoc"><p>OTA task is currently running. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a028b805607099ab726f14404e055d544ad6d726159f440330c61f00d4f44c0c1a"></a>stm32ota_FAIL&#160;</td><td class="fielddoc"><p>OTA task has failed and terminated. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a028b805607099ab726f14404e055d544a3de7872375a11fb4e940c494da113abc"></a>stm32ota_DONE&#160;</td><td class="fielddoc"><p>OTA task has succeeded and terminated. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9b136ba0858dafc447685788e0cc6b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b136ba0858dafc447685788e0cc6b0d">&#9670;&nbsp;</a></span>stm32ota_doUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool stm32ota_doUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>firmware_url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start a task which does the complete STM32 firmware update from given URL. </p>
+<pre class="fragment">                 This still needs an internal file system to store the firmware.bin. The file path is in STM32_FW_FILE_NAME
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">firmware_url</td><td>URL of the file. http only. https scheme is currently not supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>success </dd></dl>
+
+</div>
+</div>
+<a id="a8530b699466e80d4a6904a853cc4a791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8530b699466e80d4a6904a853cc4a791">&#9670;&nbsp;</a></span>stm32Ota_firmwareDownload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool stm32Ota_firmwareDownload </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>download (firmware) to internal file system using HTTP </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>URL of the file. https URLs are currently not supported. </td></tr>
+    <tr><td class="paramname">file_name</td><td>PATH to store the downloaded file to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>success </dd></dl>
+
+</div>
+</div>
+<a id="af9c34fd3fe201eaa4e2fb10cebd3a9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c34fd3fe201eaa4e2fb10cebd3a9b0">&#9670;&nbsp;</a></span>stm32Ota_firmwareUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool stm32Ota_firmwareUpdate </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>update the STM32 firmware from internal file system </p>
+<pre class="fragment">                This takes a long time, so it should be called in dedicated task/thread
+</pre> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>Path of the file holding the firmware.bin file for the STM32 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>success </dd></dl>
+
+</div>
+</div>
+<a id="a19b88cad54601fca469d6687a93e2004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19b88cad54601fca469d6687a93e2004">&#9670;&nbsp;</a></span>stm32ota_getState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544">stm32ota_state_T</a> stm32ota_getState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get current state of the over the air update process </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="stm32__ota_8h.html#a028b805607099ab726f14404e055d544">ota process state</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a26f80b552a11395da5257dbea821925.html">stm32</a></li><li class="navelem"><a class="el" href="stm32__ota_8h.html">stm32_ota.h</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 17:09:55 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Apr 21 2024 20:33:19 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

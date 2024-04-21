@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['so_5ftgt_5fany_621',['SO_TGT_ANY',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba16a23f03ad10bde8c0c469432b8116b3',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fcli_5ftcp_622',['SO_TGT_CLI_TCP',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba41f312a59c234a3dbb3c473893056116',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fcli_5fusb_623',['SO_TGT_CLI_USB',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba6b19aeb943f2b2c3c605c6a4e202606a',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fflag_5fjson_624',['SO_TGT_FLAG_JSON',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba41d36f2d66afbaa4eb3a353e261a554f',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fflag_5ftxt_625',['SO_TGT_FLAG_TXT',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba17e9921d54955f528c32abaa478012f0',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fhttp_626',['SO_TGT_HTTP',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560ebab6f60626a64e768aebc103cc8dab4ec3',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fmqtt_627',['SO_TGT_MQTT',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba924c9bc649fc53458ed763ae43deb05d',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fnone_628',['SO_TGT_NONE',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba4d918bcc027edc6909bb9eef7a8c61c0',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fstm32_629',['SO_TGT_STM32',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560ebacfd5024d7ae15ebda5889e6236bef6f4',1,'so_target_bits.h']]],
-  ['so_5ftgt_5fws_630',['SO_TGT_WS',['../so__target__bits_8h.html#a4287763a812c1b70a0c88083f96560eba5bc23bd2b710d9def24e3202c38d16db',1,'so_target_bits.h']]]
+  ['stm32ota_5fdone_234',['stm32ota_DONE',['../stm32__ota_8h.html#a028b805607099ab726f14404e055d544a3de7872375a11fb4e940c494da113abc',1,'stm32_ota.h']]],
+  ['stm32ota_5ffail_235',['stm32ota_FAIL',['../stm32__ota_8h.html#a028b805607099ab726f14404e055d544ad6d726159f440330c61f00d4f44c0c1a',1,'stm32_ota.h']]],
+  ['stm32ota_5fnone_236',['stm32ota_NONE',['../stm32__ota_8h.html#a028b805607099ab726f14404e055d544a6e4ff79f502bd8c01d3a4eea301e1b52',1,'stm32_ota.h']]],
+  ['stm32ota_5frun_237',['stm32ota_RUN',['../stm32__ota_8h.html#a028b805607099ab726f14404e055d544aa393551c64069b17ab71fbf75a1d77e3',1,'stm32_ota.h']]]
 ];

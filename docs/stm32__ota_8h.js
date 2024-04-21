@@ -10,5 +10,5 @@ var stm32__ota_8h =
     [ "stm32ota_doUpdate", "stm32__ota_8h.html#a9b136ba0858dafc447685788e0cc6b0d", null ],
     [ "stm32Ota_firmwareDownload", "stm32__ota_8h.html#a8530b699466e80d4a6904a853cc4a791", null ],
     [ "stm32Ota_firmwareUpdate", "stm32__ota_8h.html#af9c34fd3fe201eaa4e2fb10cebd3a9b0", null ],
-    [ "stm32ota_getState", "stm32__ota_8h.html#ace2ab8accab45ec54f607d9f87258df0", null ]
+    [ "stm32ota_getState", "stm32__ota_8h.html#a19b88cad54601fca469d6687a93e2004", null ]
 ];

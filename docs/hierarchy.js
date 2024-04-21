@@ -15,9 +15,7 @@ var hierarchy =
     ] ],
     [ "SettingsData", "structSettingsData.html", null ],
     [ "stm32_lock_guard< _Mutex >", "classstm32__lock__guard.html", null ],
-    [ "Stm32_Uart_if", "classStm32__Uart__if.html", [
-      [ "Stm32_Uart", "classStm32__Uart.html", null ]
-    ] ],
+    [ "Stm32_Uart_if", "classStm32__Uart__if.html", null ],
     [ "Weather::wday_hour", "structWeather_1_1wday__hour.html", null ],
     [ "Weather", "classWeather.html", [
       [ "Weather_Irrigation", "classWeather__Irrigation.html", null ]
