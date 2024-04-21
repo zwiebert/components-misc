@@ -14,13 +14,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "SettingsData", "structSettingsData.html", null ],
-    [ "Stm32_Bootloader", "classStm32__Bootloader.html", null ],
     [ "stm32_lock_guard< _Mutex >", "classstm32__lock__guard.html", null ],
     [ "Stm32_Uart_if", "classStm32__Uart__if.html", [
-      [ "Stm32_Uart", "classStm32__Uart.html", [
-        [ "Stm32_Uart_ESP32", "classStm32__Uart__ESP32.html", null ]
-      ] ],
-      [ "Stm32_Uart_Ts", "classStm32__Uart__Ts.html", null ]
+      [ "Stm32_Uart", "classStm32__Uart.html", null ]
     ] ],
     [ "Weather::wday_hour", "structWeather_1_1wday__hour.html", null ],
     [ "Weather", "classWeather.html", [

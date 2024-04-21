@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="abstract/interface class for accessing STM32 for communication and firmware update">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-167.5 165,-167.5 165,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="82.5" y="-155.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stm32_Uart_if</text>
 <polyline fill="none" stroke="black" points="0,-148.5 165,-148.5 "/>

@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('stm32_8h_source.html',''); initResizab
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="stm32_2include_2stm32_2mutex_8h.html" title="thread mutex to protect USART read and write access">&quot;mutex.h&quot;</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stm32</span><span class="preprocessor">/</span><span class="preprocessor">mutex</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdbool</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">stdint</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -105,53 +105,59 @@ $(document).ready(function(){initNavTree('stm32_8h_source.html',''); initResizab
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structcfg__stm32.html#abd9606197f8ef988204b0570d1c01521">   17</a></span>&#160;    uint8_t <a class="code" href="structcfg__stm32.html#abd9606197f8ef988204b0570d1c01521">boot_gpio_is_inverse</a> :1; <span class="comment">///&lt; invert the boot pin if connected by an inverting transistor</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcfg__stm32.html#aacb11d70f75a736db81ed106bc79cc58">   18</a></span>&#160;    uint8_t <a class="code" href="structcfg__stm32.html#aacb11d70f75a736db81ed106bc79cc58">boot_gpio</a> :7; <span class="comment">///&lt; GPIO number which is connected to STM32 boot pin</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcfg__stm32.html#aa133ed95bbffdb3568361826bef2c399">   19</a></span>&#160;    uint8_t <a class="code" href="structcfg__stm32.html#aa133ed95bbffdb3568361826bef2c399">reset_gpio</a>;  <span class="comment">///&lt; GPIO number which is connected to STM32 reset pin</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  };</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> __cplusplus</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">bool</span> stm32_mutexTake();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">bool</span> stm32_mutexTakeTry();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> stm32_mutexGive();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/// write data to stm32</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a6f06f0b7b80423d9eff33af60ef55026">stm32_write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">unsigned</span> src_len);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/// read data from stm32</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a4feda880e8cf30c2c1317e1741577026">stm32_read</a>(<span class="keywordtype">char</span> *dst, <span class="keywordtype">unsigned</span> dst_size);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/// read line from stm32 with waiting for Queue outside of stm32_mutex</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a7a0686dea747d51176a1bd03fbac6737">stm32_read_line</a>(<span class="keywordtype">char</span> *dst, <span class="keywordtype">unsigned</span> dst_size, <span class="keywordtype">unsigned</span> wait_ms);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/// get char from STM32 (with optional blocking)</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a98504450ab50a36f3aa7ed496a7e4d20">stm32_getc</a>(<span class="keywordtype">bool</span> block);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/// write data to STM32 bootloader</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a6fd710c2a373c028fc0ba377803daf96">stm32_write_bl</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">unsigned</span> src_len);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/// read data from STM32 bootloader</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#aa16dae0abbe93ee06218035092e94e2c">stm32_read_bl</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *dst, <span class="keywordtype">unsigned</span> dst_size);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/// \brief  Restart STM32 into bootloader</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#a73f07ed19bcba43c9cda40e9fd59ddb0">stm32_runBootLoader</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/// \brief Restart STM32 into firmware</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#af431660f0cc271ab1a572d47daf4bac9">stm32_runFirmware</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/// \brief Restart STM32</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#adfcbdb4ce5ad02777f5790cefcf81b6a">stm32_reset</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/// \brief Check if the STM32 is currently running the firmware</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="stm32_8h.html#a248c465d27d08bc506c48f5169f88a04">stm32_isFirmwareRunning</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> stm32_setup(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structcfg__stm32.html">cfg_stm32</a> *cfg_stm32);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> __cplusplus</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structcfg__stm32.html#a263ebb374d968f3a0eeb80881468a4e3">   20</a></span>&#160;    uint8_t <a class="code" href="structcfg__stm32.html#a263ebb374d968f3a0eeb80881468a4e3">uart_parity</a>; <span class="comment">///&lt; UART parity check 0:disabled, 1:odd, 2:even. (only used when not in boot-loader mode)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> __cplusplus</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">bool</span> stm32_mutexTake();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">bool</span> stm32_mutexTakeTry();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> stm32_mutexGive();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/// write data to stm32</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a6f06f0b7b80423d9eff33af60ef55026">stm32_write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">unsigned</span> src_len);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/// read data from stm32</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a4feda880e8cf30c2c1317e1741577026">stm32_read</a>(<span class="keywordtype">char</span> *dst, <span class="keywordtype">unsigned</span> dst_size);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/// read line from stm32 with waiting for Queue outside of stm32_mutex</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a7a0686dea747d51176a1bd03fbac6737">stm32_read_line</a>(<span class="keywordtype">char</span> *dst, <span class="keywordtype">unsigned</span> dst_size, <span class="keywordtype">unsigned</span> wait_ms);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">/// get char from STM32 (with optional blocking)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a98504450ab50a36f3aa7ed496a7e4d20">stm32_getc</a>(<span class="keywordtype">bool</span> block);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/// write data to STM32 bootloader</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#a6fd710c2a373c028fc0ba377803daf96">stm32_write_bl</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">unsigned</span> src_len);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/// read data from STM32 bootloader</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="stm32_8h.html#aa16dae0abbe93ee06218035092e94e2c">stm32_read_bl</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *dst, <span class="keywordtype">unsigned</span> dst_size);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/// \brief  Restart STM32 into bootloader</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#a73f07ed19bcba43c9cda40e9fd59ddb0">stm32_runBootLoader</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/// \brief Restart STM32 into firmware</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#af431660f0cc271ab1a572d47daf4bac9">stm32_runFirmware</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/// \brief Restart STM32</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#adfcbdb4ce5ad02777f5790cefcf81b6a">stm32_reset</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/// \brief Check if the STM32 is currently running the firmware</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="stm32_8h.html#a248c465d27d08bc506c48f5169f88a04">stm32_isFirmwareRunning</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">/**</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">   * \brief            Setup UART to communicate with stm32</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">   *</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">   * \param cfg_stm32  configuration data</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="stm32_8h.html#a9144e53b162203008e6b189465bf16ef">stm32_setup</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code" href="structcfg__stm32.html">cfg_stm32</a> *cfg_stm32);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifdef</span> __cplusplus</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a26f80b552a11395da5257dbea821925.html">stm32</a></li><li class="navelem"><a class="el" href="stm32_8h.html">stm32.h</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 09:35:41 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Apr 21 2024 17:09:54 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

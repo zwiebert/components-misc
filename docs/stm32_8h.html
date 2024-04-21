@@ -92,18 +92,18 @@ $(document).ready(function(){initNavTree('stm32_8h.html',''); initResizable(); }
 
 <p>access STM32 from ESP32 for communication and firware updat  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="stm32_2include_2stm32_2mutex_8h_source.html">mutex.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="stm32_2include_2stm32_2mutex_8h_source.html">stm32/mutex.h</a>&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for stm32.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="stm32_8h__incl.svg" width="290" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="stm32_8h__incl.svg" width="335" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="stm32_8h__dep__incl.svg" width="368" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="stm32_8h__dep__incl.svg" width="139" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="stm32_8h_source.html">Go to the source code of this file.</a></p>
@@ -165,20 +165,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm3
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32_8h.html#a248c465d27d08bc506c48f5169f88a04">stm32_isFirmwareRunning</a> (void)</td></tr>
 <tr class="memdesc:a248c465d27d08bc506c48f5169f88a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the STM32 is currently running the firmware. <br /></td></tr>
 <tr class="separator:a248c465d27d08bc506c48f5169f88a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9144e53b162203008e6b189465bf16ef"><td class="memItemLeft" align="right" valign="top"><a id="a9144e53b162203008e6b189465bf16ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stm32_setup</b> (const struct <a class="el" href="structcfg__stm32.html">cfg_stm32</a> *<a class="el" href="structcfg__stm32.html">cfg_stm32</a>)</td></tr>
+<tr class="memitem:a9144e53b162203008e6b189465bf16ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32_8h.html#a9144e53b162203008e6b189465bf16ef">stm32_setup</a> (const struct <a class="el" href="structcfg__stm32.html">cfg_stm32</a> *<a class="el" href="structcfg__stm32.html">cfg_stm32</a>)</td></tr>
+<tr class="memdesc:a9144e53b162203008e6b189465bf16ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup UART to communicate with stm32.  <a href="stm32_8h.html#a9144e53b162203008e6b189465bf16ef">More...</a><br /></td></tr>
 <tr class="separator:a9144e53b162203008e6b189465bf16ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>access STM32 from ESP32 for communication and firware updat </p>
 <dl class="section author"><dt>Author</dt><dd>bertw </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a9144e53b162203008e6b189465bf16ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9144e53b162203008e6b189465bf16ef">&#9670;&nbsp;</a></span>stm32_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stm32_setup </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structcfg__stm32.html">cfg_stm32</a> *&#160;</td>
+          <td class="paramname"><em>cfg_stm32</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setup UART to communicate with stm32. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structcfg__stm32.html" title="stm32 component configuration">cfg_stm32</a></td><td>configuration data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a26f80b552a11395da5257dbea821925.html">stm32</a></li><li class="navelem"><a class="el" href="stm32_8h.html">stm32.h</a></li>
-    <li class="footer">Generated on Sun Apr 21 2024 09:35:41 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Apr 21 2024 17:09:55 for components-misc by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -1,10 +1,10 @@
 <map id="stm32/stm32.hh" name="stm32/stm32.hh">
-<area shape="rect" id="node1" title="access STM32 from ESP32 for communication and firware updat" alt="" coords="181,5,309,32"/>
-<area shape="rect" id="node2" href="$stm32_8h.html" title="access STM32 from ESP32 for communication and firware updat" alt="" coords="88,80,163,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="213,155,283,181"/>
-<area shape="rect" id="node6" href="$stm32__uart_8hh.html" title="access STM32 from ESP32 for communication and firware updat" alt="" coords="187,80,303,107"/>
-<area shape="rect" id="node7" href="$stm32_2include_2stm32_2mutex_8hh.html" title="thread mutex to protect USART read and write access" alt="" coords="379,80,463,107"/>
-<area shape="rect" id="node3" href="$stm32_2include_2stm32_2mutex_8h.html" title="thread mutex to protect USART read and write access" alt="" coords="113,155,189,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="344,155,499,181"/>
+<area shape="rect" id="node1" title="object pointer and all headers" alt="" coords="278,5,406,32"/>
+<area shape="rect" id="node2" href="$stm32_8h.html" title="access STM32 from ESP32 for communication and firware updat" alt="" coords="117,80,237,107"/>
+<area shape="rect" id="node6" href="$stm32__uart_8hh.html" title="interface for accessing STM32 for communication and firmware update" alt="" coords="261,80,423,107"/>
+<area shape="rect" id="node7" href="$stm32_2include_2stm32_2mutex_8hh.html" title="thread mutex to protect USART read and write access" alt="" coords="447,80,576,107"/>
+<area shape="rect" id="node3" href="$stm32_2include_2stm32_2mutex_8h.html" title="thread mutex to protect USART read and write access" alt="" coords="5,155,127,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="151,155,234,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="291,155,361,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="434,155,589,181"/>
 </map>

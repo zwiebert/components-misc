@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="thread/multitasking&#45;safe subclass for accessing STM32 from ESP32 for communication and firmware updat...">
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-178.5 165,-178.5 165,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="82.5" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stm32_Uart_Ts</text>
 <polyline fill="none" stroke="black" points="0,-159.5 165,-159.5 "/>
@@ -35,7 +35,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classStm32__Uart__if.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classStm32__Uart__if.html" target="_top" xlink:title="abstract/interface class for accessing STM32 from ESP32 for communication and firmware update">
 <polygon fill="none" stroke="black" points="0,-215.5 0,-382.5 165,-382.5 165,-215.5 0,-215.5"/>
 <text text-anchor="middle" x="82.5" y="-370.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stm32_Uart_if</text>
 <polyline fill="none" stroke="black" points="0,-363.5 165,-363.5 "/>

@@ -61,7 +61,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classStm32__Uart__if.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classStm32__Uart__if.html" target="_top" xlink:title="abstract/interface class for accessing STM32 from ESP32 for communication and firmware update">
 <polygon fill="none" stroke="black" points="0,-386.5 0,-553.5 165,-553.5 165,-386.5 0,-386.5"/>
 <text text-anchor="middle" x="82.5" y="-541.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stm32_Uart_if</text>
 <polyline fill="none" stroke="black" points="0,-534.5 165,-534.5 "/>
