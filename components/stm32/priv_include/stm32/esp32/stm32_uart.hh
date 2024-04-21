@@ -1,5 +1,5 @@
 /**
- * \file        stm32/stm32_uart.hh
+ * \file        esp32/stm32_uart.hh
  * \brief       access STM32 from ESP32 for communication and firmware update
  * \author      bertw
  */
@@ -17,7 +17,7 @@
 
 #include "stm32/mutex.hh"
 
-class Stm32_Uart_ESP32: public Stm32_Uart {
+class Stm32_Uart_ESP32 final: public Stm32_Uart {
 
 public:
 /// \brief  Restart STM32 into bootloader

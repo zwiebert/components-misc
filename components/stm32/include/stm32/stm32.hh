@@ -8,7 +8,7 @@
 
 
 #include <stm32/stm32.h>
-#include <stm32/stm32_uart.hh>
+#include <stm32/stm32_uart_if.hh>
 #include <stm32/mutex.hh>
 
 /**

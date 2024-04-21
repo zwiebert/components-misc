@@ -1,6 +1,6 @@
 /**
  * \file        stm32/stm32_uart_ts.hh
- * \brief       thread/multitasking-safe access to STM32 from ESP32 for communication and firmware update
+ * \brief       thread/multitasking-safe access to STM32 for communication and firmware update
  * \author      bertw
  */
 
@@ -15,12 +15,21 @@
 /**
  * \brief       thread/multitasking-safe subclass for accessing STM32 from ESP32 for communication and firmware update
  *
- *              This class will be used internally if \ref Strm32_Uartif CONFIG_STM32_MAKE_API_THREAD_SAFE is defined
+ *              This class will be used if CONFIG_STM32_MAKE_API_THREAD_SAFE is defined
+ *
+ *              This class forwards calls to another object, which also implements our interface super class, and protects
+ *              these call with the appropriate read or write mutex.
  *
  */
 class Stm32_Uart_Ts: public Stm32_Uart_if {
-  Stm32_Uart &m_stm32_uart;
+  Stm32_Uart &m_stm32_uart;  ///< object reference to which we forward all calls while locking the mutex
 public:
+
+  /**
+   * \brief  constructor
+   *
+   * \param stm32_uart     object which must be a subclass of \ref Stm32_Uart_if
+   */
   Stm32_Uart_Ts(Stm32_Uart &stm32_uart) :
       m_stm32_uart(stm32_uart) {
   }

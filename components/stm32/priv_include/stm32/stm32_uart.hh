@@ -1,50 +1,16 @@
 /**
  * \file        stm32/stm32_uart.hh
- * \brief       interface for accessing STM32 for communication and firmware update
+ * \brief       access to STM32 for communication and firmware update
  * \author      bertw
  */
 
 #pragma once
+#include <stm32/stm32_uart_if.hh>
 
-#include <stdint.h>
 
 /**
- * \brief   abstract/interface class for accessing STM32 for communication and firmware update
- *
+ * \brief  Add some implementation to interface super class
  */
-class Stm32_Uart_if {
-
-public:
-/// write data to stm32
-  virtual int stm32_write(const char *src, unsigned src_len) = 0;
-/// read data from stm32
-  virtual int stm32_read(char *dst, unsigned dst_size) = 0;
-/// read line from stm32 with waiting for Queue outside of stm32_mutex
-  virtual int stm32_read_line(char *dst, unsigned dst_size, unsigned wait_ms) = 0;
-/// get char from STM32 (with optional blocking)
-  virtual int stm32_getc(bool block) = 0;
-/// write data to STM32 bootloader
-  virtual int stm32_write_bl(const unsigned char *src, unsigned src_len) = 0;
-/// read src_len from STM32 bootloader
-  virtual int stm32_read_bl(unsigned char *dst, unsigned dst_size) = 0;
-
-/// \brief  Restart STM32 into bootloader
-  virtual void stm32_runBootLoader(void) = 0;
-
-/// \brief Restart STM32 into firmware
-  virtual void stm32_runFirmware(void) = 0;
-
-/// \brief Restart STM32
-  virtual void stm32_reset(void) = 0;
-
-/// \brief Check if the STM32 is currently running the firmware
-  virtual bool stm32_isFirmwareRunning(void) = 0;
-
-  virtual void task_delay(unsigned ms) = 0;
-};
-
-
-
 class Stm32_Uart : public Stm32_Uart_if {
 
 public:

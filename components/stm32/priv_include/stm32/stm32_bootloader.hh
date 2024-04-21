@@ -7,7 +7,7 @@
 #pragma once
 
 #include <stm32/stm32_bl.h>
-#include <stm32/stm32_uart.hh>
+#include <stm32/stm32_uart_if.hh>
 #include <stddef.h>
 
 class Stm32_Bootloader {
