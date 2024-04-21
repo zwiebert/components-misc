@@ -1,6 +1,6 @@
 /**
  * \file        stm32/stm32_uart.hh
- * \brief       access STM32 from ESP32 for communication and firware updat
+ * \brief       interface for accessing STM32 for communication and firmware update
  * \author      bertw
  */
 
@@ -8,6 +8,10 @@
 
 #include <stdint.h>
 
+/**
+ * \brief   abstract/interface class for accessing STM32 for communication and firmware update
+ *
+ */
 class Stm32_Uart_if {
 
 public:

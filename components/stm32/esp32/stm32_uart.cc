@@ -231,10 +231,8 @@ void Stm32_Uart_ESP32::stm32_configSerial(stm32_mode_T mode) {
       UART_HW_FLOWCTRL_DISABLE, .source_clk = UART_SCLK_DEFAULT };
 
 // The stm32 boot loader needs even parity
-  if (mode == STM32_MODE_BOOTLOADER) {
-    uart_config.parity = UART_PARITY_EVEN;
-    D(ESP_LOGI(TAG, "uart1: even parity\n"));
-  }
+  uart_config.parity = (mode == STM32_MODE_BOOTLOADER || stm32_cfg->uart_parity == 2) ? UART_PARITY_EVEN :
+                       (stm32_cfg->uart_parity == 1) ? UART_PARITY_ODD : UART_PARITY_DISABLE;
 
   if ((err = uart_param_config(m_uart, &uart_config))) {
     ESP_LOGE(TAG, "uart_param_config failed: %s", esp_err_to_name(err));

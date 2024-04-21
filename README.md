@@ -8,9 +8,10 @@ APIs are not stable. When a component matures later, it may move out into its ow
 
 
 #### Documentation
-   *  View [API documentation](https://zwiebert.github.io/components-misc) 
-   *  Create API documentation `make doxy-api-view`
-   *  Crate source documentation `make doxy-dev-view`
+   *  View [API documentation online](https://zwiebert.github.io/components-misc) 
+   *  View [API documentation offline](docs/index.html) 
+   *  Create and view API documentation `make doxy-api-view`
+   *  Crate and view source code documentation `make doxy-dev-view`
 
 #### Testing
    * work in progress

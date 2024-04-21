@@ -1,5 +1,5 @@
 #pragma once
-#include "mutex.hh"
+#include <stm32/mutex.hh>
 
 void stm32_wake_up_queue();
 

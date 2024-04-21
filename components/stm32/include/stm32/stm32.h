@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "mutex.h"
+#include <stm32/mutex.h>
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -17,6 +17,7 @@
     uint8_t boot_gpio_is_inverse :1; ///< invert the boot pin if connected by an inverting transistor
     uint8_t boot_gpio :7; ///< GPIO number which is connected to STM32 boot pin
     uint8_t reset_gpio;  ///< GPIO number which is connected to STM32 reset pin
+    uint8_t uart_parity; ///< UART parity check 0:disabled, 1:odd, 2:even. (only used when not in boot-loader mode)
   };
 
 #ifdef __cplusplus
@@ -52,6 +53,11 @@ extern "C" {
 /// \brief Check if the STM32 is currently running the firmware
   bool stm32_isFirmwareRunning(void);
 
+  /**
+   * \brief            Setup UART to communicate with stm32
+   *
+   * \param cfg_stm32  configuration data
+   */
   void stm32_setup(const struct cfg_stm32 *cfg_stm32);
 
 #ifdef __cplusplus

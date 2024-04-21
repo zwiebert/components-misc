@@ -24,6 +24,9 @@ menu "zwiebert: STM32"
         depends on STM32_MAKE_COMPONENT_THREAD_SAFE
         bool "Make all stm32 API functions totally thread safe"
         default y
-
+        
+    config STM32_UART_PARITY_DEFAULT
+        int "UART Parity 0=none, 1=odd, 2=even"
+        range 0 2
+        default 0
 endmenu
-

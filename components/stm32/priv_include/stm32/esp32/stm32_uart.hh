@@ -1,6 +1,6 @@
 /**
  * \file        stm32/stm32_uart.hh
- * \brief       access STM32 from ESP32 for communication and firware updat
+ * \brief       access STM32 from ESP32 for communication and firmware update
  * \author      bertw
  */
 

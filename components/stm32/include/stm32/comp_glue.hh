@@ -20,7 +20,8 @@
 
 inline cfg_stm32 *config_read_stm32(cfg_stm32 *cfg) {
   *cfg = cfg_stm32 { .uart_tx_gpio = CONFIG_STM32_UART_TX_PIN, .uart_rx_gpio = CONFIG_STM32_UART_RX_PIN, .boot_gpio_is_inverse =
-      !!config_read_item((CB_STM32_INV_BOOTPIN), 0), .boot_gpio =  CONFIG_STM32_BOOT_PIN, .reset_gpio = CONFIG_STM32_RESET_PIN, };
+      !!config_read_item((CB_STM32_INV_BOOTPIN), 0), .boot_gpio =  CONFIG_STM32_BOOT_PIN, .reset_gpio = CONFIG_STM32_RESET_PIN,
+      .uart_parity = CONFIG_STM32_UART_PARITY_DEFAULT};
   return cfg;
 }
 

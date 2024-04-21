@@ -23,8 +23,8 @@ list(APPEND srcs ${platform_srcs})
 if(COMMAND idf_component_register)
 idf_component_register(
     SRCS ${srcs} 
-    INCLUDE_DIRS "./include" 
-    REQUIRES ""  
+    INCLUDE_DIRS include 
+    PRIV_INCLUDE_DIRS priv_include 
     PRIV_REQUIRES net utils_debug utils_misc
                   driver 
 )
@@ -34,6 +34,6 @@ component_compile_features(${comp_compile_feats})
 
 else()
 add_library(stm32 STATIC ${srcs})
-target_include_directories(stm32 PUBLIC ./include)
+target_include_directories(stm32 PUBLIC include PRIVATE priv_include)
 target_link_libraries(stm32 PRIVATE net utils_debug utils_misc)
 endif()

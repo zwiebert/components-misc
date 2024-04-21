@@ -5,4 +5,4 @@
  */
 
 #pragma once
-#include "stm32_ota.h"
+#include <stm32/stm32_ota.h>
