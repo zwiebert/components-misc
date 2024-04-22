@@ -4,9 +4,6 @@
 #endif
 
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 
 
 #if 1
@@ -66,10 +63,13 @@ static void tst_compSettings() {
   }
 }
 
-TEST_CASE("CompSettings", "[config]")
-{
-  tst_compSettings();
-}
 
+int main() {
+  UNITY_BEGIN();
+
+  RUN_TEST(tst_compSettings);
+
+  return UNITY_END();
+}
 
 #endif

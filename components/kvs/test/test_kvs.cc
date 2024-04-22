@@ -1,7 +1,4 @@
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 #include "kvs/kvs_wrapper.h"
 #include <string.h>
 #include "utils_misc/cstring_utils.h"
@@ -227,13 +224,16 @@ static void test_save_restore_blob() {
     }
 }
 
+int main() {
+  UNITY_BEGIN();
 
-TEST_CASE("kvs", "[kvs]") {
-  test_save_restore_blob();
-  test_config();
-  test_set_get_default();
-  f();
-  test_for_foreach_bug();
-  test_set_get_default();
-  test_set_get_arrays();
+  RUN_TEST(test_save_restore_blob);
+  RUN_TEST(test_config);
+  RUN_TEST(test_set_get_default);
+  RUN_TEST(f);
+  RUN_TEST(test_for_foreach_bug);
+  RUN_TEST(test_set_get_default);
+  RUN_TEST(test_set_get_arrays);
+
+  return UNITY_END();
 }
