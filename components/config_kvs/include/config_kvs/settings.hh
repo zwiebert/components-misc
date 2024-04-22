@@ -23,7 +23,7 @@ struct SettingsData {
   using storeFunOkT = void (*)(otok key, const char *val);
   const char *kvs_key;
   soCfgFunT so_cfg_fun;
-  otok opt_key;
+  otok opt_key = otok::NONE;
   KvsType kvs_type;
   StoreFun store_fun;
   uint8_t id_bit;
