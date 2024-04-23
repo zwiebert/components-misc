@@ -1,6 +1,5 @@
 rsource "components/cli/Kconfig"
 rsource "components/config_kvs/Kconfig"
 rsource "components/firmware_update/Kconfig"
-rsource "components/stm32/Kconfig"
 rsource "components/txtio/Kconfig"
 rsource "components/weather/Kconfig"
