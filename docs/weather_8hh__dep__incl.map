@@ -1,4 +1,0 @@
-<map id="weather/weather.hh" name="weather/weather.hh">
-<area shape="rect" id="node1" title="create and maintain weather data archive of last seven days" alt="" coords="39,5,190,32"/>
-<area shape="rect" id="node2" href="$weather__irrigation_8hh.html" title="calculations about when to irrigate based on weather data" alt="" coords="5,80,224,107"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="weather/weather_provider_owm.hh" name="weather/weather_provider_owm.hh">
-<area shape="rect" id="node1" title="get weather data from api.openweathermap.org" alt="" coords="51,5,245,47"/>
-<area shape="rect" id="node2" href="$weather__provider_8hh.html" title="Interface for weather data provider." alt="" coords="5,95,160,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="184,95,243,121"/>
-<area shape="rect" id="node3" href="$weather__data_8hh.html" title="weather data like temperature, humidity, ..." alt="" coords="17,169,148,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="52,244,113,271"/>
-</map>

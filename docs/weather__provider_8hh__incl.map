@@ -1,5 +1,0 @@
-<map id="weather/weather_provider.hh" name="weather/weather_provider.hh">
-<area shape="rect" id="node1" title="Interface for weather data provider." alt="" coords="5,5,217,32"/>
-<area shape="rect" id="node2" href="$weather__data_8hh.html" title="weather data like temperature, humidity, ..." alt="" coords="46,80,177,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="81,155,142,181"/>
-</map>
