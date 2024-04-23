@@ -1,0 +1,4 @@
+<map id="stm32/stm32_uart_if.hh" name="stm32/stm32_uart_if.hh">
+<area shape="rect" id="node1" title="interface for accessing STM32 for communication and firmware update" alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$stm32_8hh.html" title="object pointer and all headers" alt="" coords="29,80,157,107"/>
+</map>

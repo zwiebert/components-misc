@@ -1,0 +1,5 @@
+<map id="stm32/mutex.h" name="stm32/mutex.h">
+<area shape="rect" id="node1" title="thread mutex to protect USART read and write access" alt="" coords="9,5,130,32"/>
+<area shape="rect" id="node2" href="$stm32_8h.html" title="access STM32 from ESP32 for communication and firware updat" alt="" coords="9,80,129,107"/>
+<area shape="rect" id="node3" href="$stm32_8hh.html" title="object pointer and all headers" alt="" coords="5,155,133,181"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="stm32/mutex.hh" name="stm32/mutex.hh">
+<area shape="rect" id="node1" title="thread mutex to protect USART read and write access" alt="" coords="18,5,147,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,160,107"/>
+</map>

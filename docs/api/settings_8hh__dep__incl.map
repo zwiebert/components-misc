@@ -1,0 +1,6 @@
+<map id="config_kvs/settings.hh" name="config_kvs/settings.hh">
+<area shape="rect" id="node1" title=" " alt="" coords="27,5,194,32"/>
+<area shape="rect" id="node2" href="$settings__template_8hh_source.html" title=" " alt="" coords="37,80,184,121"/>
+<area shape="rect" id="node3" href="$comp__settings_8hh.html" title="Settings for shared components." alt="" coords="5,169,216,196"/>
+<area shape="rect" id="node4" href="$config__kvs_8h.html" title="read settings from kvs storage by cb_type" alt="" coords="23,244,199,271"/>
+</map>

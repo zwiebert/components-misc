@@ -1,0 +1,8 @@
+<map id="weather/weather_data.hh" name="weather/weather_data.hh">
+<area shape="rect" id="node1" title="weather data like temperature, humidity, ..." alt="" coords="118,5,306,32"/>
+<area shape="rect" id="node2" href="$weather_8hh.html" title="create and maintain weather data archive of last seven days" alt="" coords="39,162,190,189"/>
+<area shape="rect" id="node4" href="$weather__provider_8hh.html" title="Interface for weather data provider." alt="" coords="191,80,403,107"/>
+<area shape="rect" id="node3" href="$weather__irrigation_8hh.html" title="calculations about when to irrigate based on weather data" alt="" coords="5,244,224,271"/>
+<area shape="rect" id="node5" href="$weather__provider__owm_8hh.html" title="get weather data from api.openweathermap.org" alt="" coords="214,155,407,196"/>
+<area shape="rect" id="node6" href="$weather__provider__random_8hh.html" title="provide random mock weather data for testing purposes" alt="" coords="431,155,625,196"/>
+</map>

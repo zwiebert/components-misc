@@ -1,0 +1,4 @@
+<map id="Stm32_Uart_Ts" name="Stm32_Uart_Ts">
+<area shape="rect" id="node1" title="thread/multitasking&#45;safe subclass for accessing STM32 from ESP32 for communication and firmware updat..." alt="" coords="5,277,225,516"/>
+<area shape="rect" id="node2" href="$classStm32__Uart__if.html" title="abstract/interface class for accessing STM32 from ESP32 for communication and firmware update" alt="" coords="5,5,225,229"/>
+</map>

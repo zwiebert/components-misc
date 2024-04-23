@@ -1,0 +1,4 @@
+<map id="stm32/stm32_ota.h" name="stm32/stm32_ota.h">
+<area shape="rect" id="node1" title="download stm32 firmware.bin and flash it to the STM32 via UART using the stm32 boot&#45;loader" alt="" coords="15,5,163,32"/>
+<area shape="rect" id="node2" href="$stm32__flash_8hh.html" title="download and update firmware of the connected STM32" alt="" coords="5,80,172,107"/>
+</map>

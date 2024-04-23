@@ -1,0 +1,7 @@
+<map id="weather/weather_provider_random.hh" name="weather/weather_provider_random.hh">
+<area shape="rect" id="node1" title="provide random mock weather data for testing purposes" alt="" coords="53,5,246,47"/>
+<area shape="rect" id="node2" href="$weather__provider_8hh.html" title="Interface for weather data provider." alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="185,95,250,121"/>
+<area shape="rect" id="node3" href="$weather__data_8hh.html" title="weather data like temperature, humidity, ..." alt="" coords="17,169,148,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="52,244,113,271"/>
+</map>
