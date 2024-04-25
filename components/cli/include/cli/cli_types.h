@@ -24,7 +24,7 @@ struct parm_handler {
   const char *help; ///< help text for this command
 };
 
-/// \brief describing an array of \link parm_handler \endlink
+/// \brief describing an array of @ref parm_handler 
 struct parm_handlers {
   const struct parm_handler *handlers; ///< array of handlers
   int count; ///< length of array
@@ -38,13 +38,13 @@ struct cli_buf {
   int quote_count; ///< helper to support quoted values
 };
 
-/// \brief describing an array of \link clpar \endlink
+/// \brief describing an array of @ref clpar 
 struct cli_parm {
-  clpar *par; ///< array of \link clpar \endlink
+  clpar *par; ///< array of @ref clpar 
   unsigned size; ///< length of array
 };
 
-/// \brief type of getchar function used in calls of \link cli_get_commandline \endlink
+/// \brief type of getchar function used in calls of @ref cli_get_commandline 
 typedef int (*getc_funT)(void);
 
 /// \brief status of get command line
@@ -52,7 +52,7 @@ enum cli_get_commline_retT {
   CMDL_DONE, ///< line complete
   CMDL_ERROR, ///< error occured
   CMDL_INCOMPLETE, ///< line is still incomplete
-  CMDL_LINE_BUF_FULL ///< buffer full, call \link cliBuf_enlarge \endlink
+  CMDL_LINE_BUF_FULL ///< buffer full, call @ref cliBuf_enlarge 
 };
 
 /// \brief type of parameter handler function

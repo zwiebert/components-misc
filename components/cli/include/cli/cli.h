@@ -40,9 +40,9 @@ extern bool (*cli_hook_checkPassword)(clpar p[], int len, class UoutWriter &td);
 int cli_processParameters(clpar p[], int len, class UoutWriter &td);
 
 /**
- * \brief Set this to hook into \link cli_process_json \endlink
+ * \brief Set this to hook into @ref cli_process_json 
  * \param json      json command string
- * \return          if true is returned, parsing and processing JSON in \link cli_process_json \endlink will be skipped
+ * \return          if true is returned, parsing and processing JSON in @ref cli_process_json  will be skipped
  *
  */
 extern bool (*cli_hook_process_json)(char *json);
@@ -52,7 +52,7 @@ extern bool (*cli_hook_process_json)(char *json);
  * \brief           Set this to get an iterator to the "json" command object
  *
  *                  This is for small objects only. The jsmn parser holds only a small amount of tokens.
- *                  If you need bigger objects, use \link cli_hook_process_json \endlink
+ *                  If you need bigger objects, use @ref cli_hook_process_json 
  * \param it        reference to iterator copy. the state/position at return does not matter
  * \return          if false is returned the object may be processed differently.
  */
@@ -63,8 +63,8 @@ extern bool (*cli_hook_process_json_obj)(class UoutWriter &td, Jsmn_String::Iter
  * \param buf        provides the destination buffer
  * \param getc_fun   provides a pointer to a function to read the characters from
  * \return           a state, to check if the commandline is complete or otherwise. If CMDL_BUF_FULL is returned, you should
- *                   enlarge the buffer with \link cliBuf_enlarge \endlink .
- *                   If CMDL_DONE is returned, the buffer can be passed to \link cli_process_cmdline \endlink or \link cli_process_json \endlink
+ *                   enlarge the buffer with @ref cliBuf_enlarge  .
+ *                   If CMDL_DONE is returned, the buffer can be passed to @ref cli_process_cmdline  or @ref cli_process_json 
  */
 enum cli_get_commline_retT cli_get_commandline(struct cli_buf *buf, getc_funT getc_fun);
 
@@ -73,7 +73,7 @@ enum cli_get_commline_retT cli_get_commandline(struct cli_buf *buf, getc_funT ge
  * \brief            Parse a command line and process it
  *
  * \param line       command line without any terminating character like ';' or '\n'
- * \param proc_parm  pointer to a function to process the parsed line. default is \link cli_processParameters \endlink
+ * \param proc_parm  pointer to a function to process the parsed line. default is @ref cli_processParameters 
  * \param td         target descriptor to print any output to
  *
  * \return
@@ -85,7 +85,7 @@ void cli_process_cmdline(char *line, class UoutWriter &td, process_parm_cb proc_
  * \brief            Parse a JSON command "line" and process it
  *
  * \param json       command and options in JSON format  without amy terminating character like ';' or '\n'
- * \param proc_parm  pointer to a function to process the parsed line. default is \link cli_processParameters \endlink
+ * \param proc_parm  pointer to a function to process the parsed line. default is @ref cli_processParameters 
  * \param td         target descriptor to print any output to
  *
  * \return
@@ -110,7 +110,7 @@ int asc2bool(const char *val);
 
 /**
  * \brief worker function of cli framework. Call it if input is available.
- *  If the provided get-character for \link cli_get_commandline \endlink function does block, then it should be called from a loop inside a dedicated task
+ *  If the provided get-character for @ref cli_get_commandline  function does block, then it should be called from a loop inside a dedicated task
  */
 void cli_loop(void);
 
