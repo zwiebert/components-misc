@@ -47,6 +47,8 @@ int cli_processParameters(clpar p[], int len, class UoutWriter &td);
  */
 extern bool (*cli_hook_process_json)(char *json);
 
+extern bool (*cli_hook_process_txt)(char *txt);
+
 
 /**
  * \brief           Set this to get an iterator to the "json" command object

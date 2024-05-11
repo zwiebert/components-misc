@@ -32,6 +32,7 @@
 bool (*cli_hook_checkPassword)(clpar p[], int len, class UoutWriter &td);
 bool (*cli_hook_process_json)(char *json);
 bool (*cli_hook_process_json_obj)(class UoutWriter &td,Jsmn_String::Iterator &it);
+bool (*cli_hook_process_txt)(char *txt);
 
 
 /////////////////////////////////private/////////////////////////////////////////////////////////
@@ -137,6 +138,10 @@ void cli_process_json(char *json, class UoutWriter &td, process_parm_cb proc_par
 
 void cli_process_cmdline(char *line, class UoutWriter &td, process_parm_cb proc_parm) {
   L(db_logi(logtag, "process_cmdline: %s", line));
+
+  if (cli_hook_process_txt && cli_hook_process_txt(line))
+    return;
+
   clpar par[20] = { };
   struct cli_parm clp = { .par = par, .size = 20 };
 

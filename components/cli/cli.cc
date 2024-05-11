@@ -82,6 +82,8 @@ void cli_loop(void) {
         UoutWriterConsole td { SO_TGT_STM32 | SO_TGT_FLAG_JSON };
         cli_process_json(cmdline, td);
       } else {
+         UoutWriterConsole td { (SO_TGT_CLI | SO_TGT_FLAG_TXT) };
+         cli_process_cmdline(cmdline, td);
       }
     }
   }
