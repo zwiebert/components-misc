@@ -219,28 +219,26 @@ io_putld(int32_t n) {
 }
 
 int io_getline(char *buf, unsigned buf_size) {
-  int i, c;
+  unsigned i;
 
-  { LockGuard lock(txtio_mutex);
-    if (!io_getc_fun)
+  LockGuard lock(txtio_mutex);
+  if (!io_getc_fun)
+    return -1;
+
+  for (i = 0; (i + 1) < buf_size; ++i) {
+    int c = io_getc_fun();
+
+    if (c == -1)
       return -1;
 
-    for (i = 0; (i + 1) < buf_size; ++i) {
-      c = io_getc_fun();
+    if (c == ';')
+      break;
 
-      if (c == -1)
-        return -1;
-
-      if (c == ';')
-        break;
-
-      buf[i] = (char) c;
-    }
-
-    buf[i] = '\0';
-    return i;
+    buf[i] = (char) c;
   }
-  return -1;
+
+  buf[i] = '\0';
+  return i;
 }
 
 void 
