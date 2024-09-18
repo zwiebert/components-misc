@@ -8,20 +8,17 @@
 #include <txtio/txtio_setup.hh>
 #include <txtio/txtio_mutex.hh>
 #include "txtio/inout.h"
-
-#include "driver/uart.h"
-
-
-
-
 #include <uout/uo_callbacks.h>
 
 // sys
 //#include "esp_console.h"
+#include "driver/uart.h"
+#include "driver/uart_vfs.h"
 #include "esp_vfs_dev.h"
 #include <esp_system.h>
 #include <esp32/rom/ets_sys.h>
 #include "esp_log.h"
+
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -137,7 +134,7 @@ static void initialize_console(struct cfg_txtio *cfg_txtio)
     ESP_ERROR_CHECK( uart_param_config(UART_NUM, &uart_config) );
 
     /* Tell VFS to use UART driver */
-    esp_vfs_dev_uart_use_driver(UART_NUM);
+    uart_vfs_dev_use_driver(UART_NUM);
 #if 0
     /* Initialize the console */
     esp_console_config_t console_config = {
