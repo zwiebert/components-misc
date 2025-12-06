@@ -24,7 +24,7 @@ idf_component_register(SRCS ${srcs}
     INCLUDE_DIRS "./include" 
     REQUIRES utils_misc
     PRIV_REQUIRES uout
-                  driver vfs #PRIV_ESP_IDF
+                  esp_driver_uart vfs #PRIV_ESP_IDF
 )
 
 component_compile_options(${comp_compile_opts})
