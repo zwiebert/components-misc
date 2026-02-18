@@ -58,7 +58,7 @@ extern bool (*cli_hook_process_txt)(char *txt);
  * \param it        reference to iterator copy. the state/position at return does not matter
  * \return          if false is returned the object may be processed differently.
  */
-extern bool (*cli_hook_process_json_obj)(class UoutWriter &td, Jsmn_String::Iterator &it);
+extern bool (*cli_hook_process_json_obj)(class UoutWriter &td, jsoneat::Jsmn_String::Iterator &it);
 
 /**
  * \brief            Gets a command line from a console. Allows quoting strings and backspace to edit typos.

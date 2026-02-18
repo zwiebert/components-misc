@@ -31,12 +31,12 @@
 
 bool (*cli_hook_checkPassword)(clpar p[], int len, class UoutWriter &td);
 bool (*cli_hook_process_json)(char *json);
-bool (*cli_hook_process_json_obj)(class UoutWriter &td,Jsmn_String::Iterator &it);
+bool (*cli_hook_process_json_obj)(class UoutWriter &td,jsoneat::Jsmn_String::Iterator &it);
 bool (*cli_hook_process_txt)(char *txt);
 
 
 /////////////////////////////////private/////////////////////////////////////////////////////////
-static bool parse_and_process_jsmn(Jsmn_String::Iterator &it, class UoutWriter &td, process_parm_cb proc_parm) {
+static bool parse_and_process_jsmn(jsoneat::Jsmn_String::Iterator &it, class UoutWriter &td, process_parm_cb proc_parm) {
 
   // "json" object is allowed to have nested content
   if (it.keyIsEqual("json", JSMN_OBJECT)) {
@@ -84,7 +84,7 @@ static bool parse_and_process_jsmn(Jsmn_String::Iterator &it, class UoutWriter &
 static bool parse_and_process_json(char *json, class UoutWriter &td, process_parm_cb proc_parm) {
  // L(db_logi(logtag, "process_json: %s", json));
 
-  auto jsmn = Jsmn_String(json, 128);//Jsmn<128, char *>(json);
+  auto jsmn = jsoneat::Jsmn_String(json, 128);//Jsmn<128, char *>(json);
   if (!jsmn)
     return false;
   auto it = jsmn.begin();
