@@ -48,7 +48,8 @@ private:
 public:
 
   auto get_past_weather_data_json(char *dst, size_t dst_size, int wday, int hour) {
-    return m_past_wd[wday][hour].to_json(dst, dst_size);
+    return jsoneat::to_json::cbuf::to_json_val(dst, dst_size, m_past_wd[wday][hour]);
+   // return m_past_wd[wday][hour].to_json(dst, dst_size);
   }
 
   /**
@@ -57,6 +58,4 @@ public:
    * \return success
    */
   bool to_json(class UoutBuilderJson &sj);
-  static constexpr int PAST_WD_OBJS =  sizeof m_past_wd / sizeof m_past_wd[0][0];
-  static constexpr int TOTAL_OBJS = PAST_WD_OBJS;
 };
