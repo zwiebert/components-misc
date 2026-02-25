@@ -57,5 +57,5 @@ public:
    * \param sj        JSON builder which should contain an UoutWriter object to write out the large past weather data in small chunks
    * \return success
    */
-  bool to_json(class UoutBuilderJson &sj);
+  bool to_json(class UoutWriter &td);
 };
