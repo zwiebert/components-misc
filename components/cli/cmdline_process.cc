@@ -84,9 +84,11 @@ static bool parse_and_process_jsmn(jsoneat::Jsmn_String::Iterator &it, class Uou
 static bool parse_and_process_json(char *json, class UoutWriter &td, process_parm_cb proc_parm) {
  // L(db_logi(logtag, "process_json: %s", json));
 
-  auto jsmn = jsoneat::Jsmn_String(json, 128);//Jsmn<128, char *>(json);
-  if (!jsmn)
+ auto jsmn = jsoneat::JsoNeat<char *>(json); // not const char*, because some CLI functions write to json
+  if (!jsmn) {
+    db_loge(logtag, "%s: creating JSMN object failed. JSMN-error: %d\n JSON:<%s>", __func__, jsmn.get_jsmn_error(), json);
     return false;
+  }
   auto it = jsmn.begin();
 
   int err = 0;

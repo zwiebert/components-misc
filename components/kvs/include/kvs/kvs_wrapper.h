@@ -29,6 +29,7 @@ bool kvs_erase_key(kvshT handle, const char *key);
 
 bool kvs_set_str(kvshT handle, const char *key, const char *val);
 bool kvs_get_str(kvshT handle, const char *key, char *dst, size_t dst_size);
+size_t kvs_get_strlen(kvshT handle, const char *key);
 
 bool kvs_set_blob(kvshT handle, const char *key, const void *val, size_t val_size);
 bool kvs_get_blob(kvshT handle, const char *key, void *dst, size_t dst_size);

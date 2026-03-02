@@ -102,6 +102,14 @@ bool kvs_get_str(kvshT handle, const char *key, char *dst, size_t dst_size) {
   return 0 <= n && n <= dst_size;
 }
 
+size_t kvs_get_strlen(kvshT handle, const char *key) {
+  size_t dst_len = 0;
+  if (nvs_get_str(VP2H(handle), key, nullptr, &dst_len) == ESP_OK) {
+    return (int) dst_len;
+  }
+  return 0;
+}
+
 // macros to generate set/get for integer types
 #define SET_DT_FUN(DT,ST) \
 bool kvs_set##ST (kvshT handle, const char *key, DT val) { \
