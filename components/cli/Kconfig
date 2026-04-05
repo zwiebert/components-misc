@@ -1,6 +1,6 @@
 menu "zwiebert: CLI"
 
-    config UOUT_HAVE_COMPONENT
+    config CLI_HAVE_COMPONENT
       bool
       default y
 
