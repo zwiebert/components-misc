@@ -83,7 +83,7 @@ void kvs_setup(void);
 #ifdef __cplusplus
 }
 
-#ifdef MCU_ESP32
+#ifdef ESP_PLATFORM
 #include "../../esp32/kvs_templates.hh"
 #else
 #include "../../host/kvs_templates.hh"
