@@ -4,8 +4,8 @@
 #include <utils_misc/int_types.h>
 
 struct cfg_txtio {
-  uo_flagsT flags; ///< additional flags for callback
-  enum verbosity verbose;
+  uo_flagsT flags = {}; ///< additional flags for callback
+  enum verbosity verbose = vrbNone;
   int baud = CONFIG_APP_UART_BAUD_RATE;
 };
 

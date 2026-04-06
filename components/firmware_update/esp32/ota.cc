@@ -62,18 +62,19 @@ static void simple_ota_example_task(void *pvParameter) {
   auto parm = static_cast<task_parm*>(pvParameter);
 
 
-  esp_http_client_config_t http_config = { .url = parm->url,
+  esp_http_client_config_t http_config = {};
+   http_config.url = parm->url;
 #ifndef CONFIG_APP_OTA_USE_CERT_BUNDLE
-        .cert_pem = parm->cert,
+        http_config.cert_pem = parm->cert;
 #endif
-      .event_handler = http_event_handler,
+      http_config.event_handler = http_event_handler;
 #ifdef CONFIG_APP_OTA_USE_CERT_BUNDLE
-        .crt_bundle_attach = esp_crt_bundle_attach,
+        http_config.crt_bundle_attach = esp_crt_bundle_attach;
 #endif
-        .keep_alive_enable = true,
-  };
+        http_config.keep_alive_enable = true;
 
-  esp_https_ota_config_t config = { .http_config = &http_config, };
+  esp_https_ota_config_t config = {};
+  config.http_config = &http_config;
 
   state = ota_RUN;
   esp_err_t ret = esp_https_ota(&config);

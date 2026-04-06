@@ -120,15 +120,15 @@ static void initialize_console(struct cfg_txtio *cfg_txtio)
     /* Configure UART. Note that REF_TICK is used so that the baud rate remains
      * correct while APB frequency is changing in light sleep mode.
      */
-    const uart_config_t uart_config = {
-            .baud_rate = cfg_txtio->baud,
-            .data_bits = UART_DATA_8_BITS,
-            .parity = UART_PARITY_DISABLE,
-            .stop_bits = UART_STOP_BITS_1,
-            .source_clk = UART_SCLK_REF_TICK,
-           //.flow_ctrl = UART_HW_FLOWCTRL_CTS_RTS,
-           // .rx_flow_ctrl_thresh = 64,
-    };
+     uart_config_t uart_config = {};
+            uart_config.baud_rate = cfg_txtio->baud;
+            uart_config.data_bits = UART_DATA_8_BITS;
+            uart_config.parity = UART_PARITY_DISABLE;
+            uart_config.stop_bits = UART_STOP_BITS_1;
+            uart_config.source_clk = UART_SCLK_REF_TICK;
+           // uart_config.flow_ctrl = UART_HW_FLOWCTRL_CTS_RTS;
+           // uart_config.rx_flow_ctrl_thresh = 64;
+
     /* Install UART driver for interrupt-driven reads and writes */
     ESP_ERROR_CHECK( uart_driver_install(UART_NUM, UART_RX_RINGBUF_SIZE, UART_TX_RINGBUF_SIZE, 0, NULL, 0) );
     ESP_ERROR_CHECK( uart_param_config(UART_NUM, &uart_config) );
