@@ -4,5 +4,5 @@ idf_component_register(SRC_DIRS "."
                        PRIV_REQUIRES kvs
 )
 
-component_compile_options(${comp_compile_opts})
-component_compile_features(${comp_compile_feats})
+ 
+component_compile_options("SHELL:-include sdkconfig.h")

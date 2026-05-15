@@ -1,4 +1,4 @@
-#include <sdkconfig.h>
+ 
 //////////////////////
 
 #ifdef __cplusplus
