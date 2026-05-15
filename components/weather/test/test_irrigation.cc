@@ -1,4 +1,7 @@
 #include <unity.h>
+#ifdef TEST_HOST
+#include <test_runner.h>
+#endif
 
 #include <cstdlib>
 
@@ -135,15 +138,12 @@ static void test_adaption() {
 }
 
 
-int main() {
-  UNITY_BEGIN();
-
-  RUN_TEST(test_adaption);
+TEST_CASE("test irrigation", "[weather]")
+{
+  test_adaption();
 #if 0
-  RUN_TEST(test_weather_irrigation);
-  RUN_TEST(test_points2);
-  RUN_TEST(test_points);
+  test_weather_irrigation();
+  test_points2();
+   test_points();
 #endif
-
-  return UNITY_END();
 }

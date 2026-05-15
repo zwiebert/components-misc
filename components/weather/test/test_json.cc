@@ -1,4 +1,7 @@
 #include <unity.h>
+#ifdef TEST_HOST
+#include <test_runner.h>
+#endif
 
 #include "weather_data.h"
 #include "../openweathermap.hh"
@@ -15,10 +18,7 @@ void test_json() {
   TEST_ASSERT_EQUAL_UINT(34, w.get_cloud_coverage_percent());
 }
 
-int main() {
-  UNITY_BEGIN();
-
-  RUN_TEST(test_json);
-
-  return UNITY_END();
+TEST_CASE("test json", "[weather]")
+{
+  test_json();
 }

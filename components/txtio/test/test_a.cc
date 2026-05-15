@@ -1,10 +1,14 @@
 #include <unity.h>
+#ifdef TEST_HOST
+#include <test_runner.h>
+#endif
 #include "../include/txtio/inout.h"
 
-int main() {
-  UNITY_BEGIN();
+char buf[512] = "42";
 
-  // RUN_TEST();
 
-  return UNITY_END();
+TEST_CASE("test name", "[txtio]")
+{
+        TEST_ASSERT_EQUAL_STRING("42", buf);
+        //TEST_ASSERT_TRUE(0);
 }

@@ -1,4 +1,6 @@
-set(srcs esp32/kvs_implementation.cc) 
+set(srcs "") 
+set(platform_srcs esp32/kvs_implementation.cc host/kvs_posix.cc) 
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake")
 
 idf_component_register(SRCS ${srcs} 
     INCLUDE_DIRS "./include"

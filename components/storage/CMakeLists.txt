@@ -1,4 +1,6 @@
 set(srcs esp32/storage.c) 
+set(platform_srcs "")
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake" OPTIONAL)
 
 idf_component_register(
     SRCS ${srcs} 

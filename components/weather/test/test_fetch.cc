@@ -1,4 +1,7 @@
 #include <unity.h>
+#ifdef TEST_HOST
+#include <test_runner.h>
+#endif
 
 #include <iostream>
 using namespace std;
@@ -57,14 +60,11 @@ void test_fetch() {
   cout << "humi (%): " << wd.get_relative_humidity_percent() << "\n";
 }
 
-int main() {
-  UNITY_BEGIN();
-
-#if 0 //def CONFIG_WEATHER_OWM_URL_STRING
-  RUN_TEST(test_fetch);
-  RUN_TEST(test_weather);
+TEST_CASE("test json", "[weather]")
+{
+// test needs  URL with vaild APPID for api.openweathermap.org
+#ifdef CONFIG_WEATHER_OWM_URL_STRING
+ //XXX test_fetch();
+ //XXX test_weather();
 #endif
-
-  return UNITY_END();
 }
-
