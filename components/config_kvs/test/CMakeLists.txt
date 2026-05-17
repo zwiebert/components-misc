@@ -5,4 +5,3 @@ idf_component_register(SRC_DIRS "."
 )
 
  
-component_compile_options("SHELL:-include sdkconfig.h")
